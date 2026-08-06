@@ -118,17 +118,19 @@ export async function deleteJob(id: string) {
   revalidatePath("/admin/jobs");
 }
 
-export async function publishJob(id: string, published: boolean) {
+export async function publishJob(
+  id: string,
+  published: boolean
+) {
   const supabase = await createClient();
-  const { data, error } = await supabase
+
+  const { error } = await supabase
     .from("jobs")
     .update({
       published,
       updated_at: new Date().toISOString(),
     })
-    .eq("id", id)
-    .select()
-    .single();
+    .eq("id", id);
 
   if (error) {
     throw new Error(error.message);
@@ -136,8 +138,6 @@ export async function publishJob(id: string, published: boolean) {
 
   revalidatePath("/careers");
   revalidatePath("/admin/jobs");
-
-  return data;
 }
 
 export async function submitApplication(input: ApplicationInsert, resumeFile?: File) {
