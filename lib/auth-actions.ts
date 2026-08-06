@@ -12,10 +12,13 @@ export async function signInWithEmail(formData: FormData) {
   }
 
   const supabase = await createClient();
-  const { error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
+const { data, error } = await supabase.auth.signInWithPassword({
+  email,
+  password,
+});
+
+console.log("LOGIN ERROR:", error);
+console.log("SESSION:", data.session);
 
   if (error) {
     throw new Error(error.message);

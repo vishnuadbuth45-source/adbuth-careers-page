@@ -25,21 +25,34 @@ export async function updateSession(request: NextRequest) {
         getAll() {
           return request.cookies.getAll();
         },
-        setAll(cookiesToSet: Array<{ name: string; value: string; options?: Record<string, unknown> }>) {
-          cookiesToSet.forEach(({ name, value }) =>
-            request.cookies.set(name, value)
-          );
+
+        setAll(
+          cookiesToSet: Array<{
+            name: string;
+            value: string;
+            options?: Record<string, unknown>;
+          }>
+        ) {
+          // Update the request cookies
+          cookiesToSet.forEach(({ name, value }) => {
+            request.cookies.set(name, value);
+          });
+
+          // Create a fresh response
           supabaseResponse = NextResponse.next({
             request,
           });
-          cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
-          );
+
+          // Write cookies to the response
+          cookiesToSet.forEach(({ name, value, options }) => {
+            supabaseResponse.cookies.set(name, value, options);
+          });
         },
       },
     }
   );
 
+  // Refresh the auth session if needed
   await supabase.auth.getUser();
 
   return supabaseResponse;
