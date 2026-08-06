@@ -222,12 +222,12 @@ export async function submitApplication(input: ApplicationInsert, resumeFile?: F
 }
 
 export async function removeApplication(id: string) {
-  const supabase = await createClient();
+  const { supabase } = await requireAdmin();
 
   if (!id) {
     throw new Error("Application ID is required.");
   }
-
+    console.log("received id :"+id+" what is this ");
   const { error } = await supabase
     .from("applications")
     .delete()

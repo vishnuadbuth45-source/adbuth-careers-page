@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/shared/container";
 import { Typography } from "@/components/shared/typography";
 import { createClient } from "@/lib/supabase/server";
+import { DeleteApplicationButton } from "@/components/admin/deletion-button";
 
 type ApplicationRow = {
   id: string;
@@ -14,23 +15,44 @@ type ApplicationRow = {
   } | null;
 };
 
+type Props = {
+  searchParams: Promise<{
+    search?: string;
+  }>;
+};
+
+
 export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Admin Applications",
 };
 
-export default async function AdminApplicationsPage() {
+export default async function AdminApplicationsPage({
+  searchParams,
+}: Props) {
+  const { search = "" } = await searchParams;
+
   const supabase = await createClient();
-  const { data: applications } = await supabase
+
+  let query = supabase
     .from("applications")
-    .select("*, jobs:job_id(id, title)")
+    .select("*, jobs:job_id(id,title)")
     .order("created_at", { ascending: false });
+
+  if (search) {
+    query = query.or(
+      `full_name.ilike.%${search}%,email.ilike.%${search}%`
+    );
+  }
+
+  const { data: applications } = await query;
 
   const typedApplications = (applications ?? []) as ApplicationRow[];
 
   return (
     <Container className="space-y-6 py-10">
+      
       <div className="space-y-2">
         <Typography variant="h2" as="h1">
           Applications management
@@ -39,6 +61,23 @@ export default async function AdminApplicationsPage() {
           Review candidate submissions in a read-only admin view.
         </Typography>
       </div>
+
+      <form className="flex gap-3">
+  <input
+    type="text"
+    name="search"
+    defaultValue={search}
+    placeholder="Search candidate..."
+    className="w-full rounded-md border px-3 py-2"
+  />
+
+  <button
+    type="submit"
+    className="rounded-md bg-primary px-4 py-2 text-primary-foreground"
+  >
+    Search
+  </button>
+</form>
 
       <div className="overflow-hidden rounded-xl border border-border bg-surface">
         <table className="min-w-full divide-y divide-border text-sm">
@@ -75,6 +114,9 @@ export default async function AdminApplicationsPage() {
                       View
                     </Link>
                   </td>
+                  <td>
+                    <DeleteApplicationButton id={application.id} />
+                    </td>
                 </tr>
               ))
             ) : (
