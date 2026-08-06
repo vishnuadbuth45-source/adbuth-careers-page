@@ -9,6 +9,28 @@ export type JobInsert = Database["public"]["Tables"]["jobs"]["Insert"];
 export type JobUpdate = Database["public"]["Tables"]["jobs"]["Update"];
 export type ApplicationInsert = Database["public"]["Tables"]["applications"]["Insert"];
 
+
+async function requireAdmin() {
+  const supabase = await createClient();
+
+  const {
+    data: { user },
+    error,
+  } = await supabase.auth.getUser();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  if (!user) {
+    throw new Error("Unauthorized");
+  }
+
+  return { supabase, user };
+}
+
+
+
 function getErrorMessage(error: unknown) {
   if (error instanceof Error) {
     return error.message;
@@ -51,6 +73,8 @@ export async function getJobBySlug(slug: string) {
 }
 
 export async function createJob(input: JobInsert) {
+
+  
   if (!input.title?.trim()) {
     throw new Error("Title is required.");
   }
@@ -63,7 +87,12 @@ export async function createJob(input: JobInsert) {
     throw new Error("Slug must be lowercase and contain only letters, numbers, and hyphens.");
   }
 
-  const supabase = await createClient();
+  const { supabase } = await requireAdmin();
+  const {
+  data: { user },
+} = await supabase.auth.getUser();
+
+console.log(user);
   const { data, error } = await supabase
     .from("jobs")
     .insert({
@@ -85,7 +114,7 @@ export async function createJob(input: JobInsert) {
 }
 
 export async function updateJob(id: string, input: JobUpdate) {
-  const supabase = await createClient();
+  const { supabase } = await requireAdmin();
   const { data, error } = await supabase
     .from("jobs")
     .update({
@@ -107,10 +136,11 @@ export async function updateJob(id: string, input: JobUpdate) {
 }
 
 export async function deleteJob(id: string) {
-  const supabase = await createClient();
+  const { supabase } = await requireAdmin();
   const { error } = await supabase.from("jobs").delete().eq("id", id);
 
   if (error) {
+    console.log("DELETE JOB ERROR:", error);
     throw new Error(error.message);
   }
 
@@ -122,7 +152,7 @@ export async function publishJob(
   id: string,
   published: boolean
 ) {
-  const supabase = await createClient();
+  const { supabase } = await requireAdmin();
 
   const { error } = await supabase
     .from("jobs")
@@ -182,10 +212,33 @@ export async function submitApplication(input: ApplicationInsert, resumeFile?: F
     .single();
 
   if (error) {
+    console.log("APPLICATION ERROR:", error);
     throw new Error(error.message);
   }
 
   revalidatePath("/admin/applications");
 
   return data;
+}
+
+export async function removeApplication(id: string) {
+  const supabase = await createClient();
+
+  if (!id) {
+    throw new Error("Application ID is required.");
+  }
+
+  const { error } = await supabase
+    .from("applications")
+    .delete()
+    .eq("id", id);
+
+  if (error) {
+    console.error("APPLICATION DELETE ERROR:", error);
+    throw new Error(error.message);
+  }
+
+  revalidatePath("/admin/applications");
+
+  return { success: true };
 }
