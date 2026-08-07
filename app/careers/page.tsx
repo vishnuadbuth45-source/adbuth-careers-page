@@ -26,6 +26,7 @@ type PublishedJob = {
   short_description: string;
   slug: string;
   updated_at: string | null;
+  created_at: string | null;
 };
 
 export const dynamic = "force-dynamic";
@@ -619,13 +620,13 @@ export default async function CareersPage() {
                 )}
               </div>
 
-              {job.updated_at && (
+              {job.created_at && (
                 <time
-                  dateTime={job.updated_at}
+                  dateTime={job.created_at}
                   className="shrink-0 whitespace-nowrap text-xs font-medium text-muted-foreground/70"
                 >
-                  Updated{" "}
-                  {new Date(job.updated_at).toLocaleDateString("en-US", {
+                  Posted{" "}on{" "}
+                  {new Date(job.created_at).toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
                     year: "numeric",
