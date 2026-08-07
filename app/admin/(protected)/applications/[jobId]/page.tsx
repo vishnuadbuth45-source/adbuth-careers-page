@@ -4,6 +4,7 @@ import { Container } from "@/components/shared/container";
 import { Typography } from "@/components/shared/typography";
 import { createClient } from "@/lib/supabase/server";
 import { DeleteApplicationButton } from "@/components/admin/deletion-button";
+import { SearchInput } from "@/components/admin/search-input";
 
 type ApplicationRow = {
   id: string;
@@ -80,21 +81,7 @@ export default async function JobApplicationsPage({
       </div>
 
       {/* Search */}
-      <form className="flex gap-3">
-        <input
-          type="text"
-          name="search"
-          defaultValue={search}
-          placeholder="Search by name or email..."
-          className="w-full rounded-md border px-3 py-2"
-        />
-        <button
-          type="submit"
-          className="rounded-md bg-primary px-4 py-2 text-primary-foreground"
-        >
-          Search
-        </button>
-      </form>
+      <SearchInput placeholder="Search by name or email..." />
 
       <div className="overflow-hidden rounded-xl border border-border bg-surface">
         <table className="min-w-full divide-y divide-border text-sm">
