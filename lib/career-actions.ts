@@ -201,15 +201,13 @@ export async function submitApplication(input: ApplicationInsert, resumeFile?: F
     }
   }
 
-  const { data, error } = await supabase
-    .from("applications")
-    .insert({
-      ...input,
-      resume_url: resumeUrl,
-      created_at: new Date().toISOString(),
-    })
-    .select()
-    .single();
+ const { error } = await supabase
+  .from("applications")
+  .insert({
+    ...input,
+    resume_url: resumeUrl,
+    created_at: new Date().toISOString(),
+  });
 
   if (error) {
     console.log("APPLICATION ERROR:", error);
@@ -218,7 +216,7 @@ export async function submitApplication(input: ApplicationInsert, resumeFile?: F
 
   revalidatePath("/admin/applications");
 
-  return data;
+  return { success: true };
 }
 
 export async function removeApplication(id: string) {
