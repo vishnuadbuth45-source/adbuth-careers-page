@@ -8,6 +8,7 @@ import image5 from "@/assets/5.webp";
 import image6 from "@/assets/6.webp";
 import image7 from "@/assets/7.webp";
 import image8 from "@/assets/8.webp";
+import Link from "next/link";
 
 const celebrationImages = [
   image1,
@@ -87,13 +88,12 @@ export default function CelebrationsPage() {
             Join a workplace where achievements are shared and every milestone
             matters.
           </p>
-
-          <a
-            href="/careers#open-positions"
-            className="mt-8 inline-flex items-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand/90"
-          >
-            Join AdbuthVerse
-          </a>
+          <Link
+  href="/careers"
+  className="mt-8 inline-flex items-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand/90"
+>
+   Join AdbuthVerse
+</Link>
         </div>
       </section>
     </main>

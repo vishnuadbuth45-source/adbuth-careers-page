@@ -153,7 +153,7 @@ export default function PrivacyPolicyPage() {
             us using the contact information provided below.
           </p>
 
-          <h2>9. Children's Privacy</h2>
+          <h2>9. Children&apos;s Privacy</h2>
 
           <p>
             Our services are not intended to knowingly collect personal

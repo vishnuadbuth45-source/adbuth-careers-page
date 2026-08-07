@@ -8,6 +8,7 @@ import image5 from "@/assets/5.webp";
 import image6 from "@/assets/6.webp";
 import image7 from "@/assets/7.webp";
 import image8 from "@/assets/8.webp";
+import Link from "next/link";
 
 const eventImages = [
   image1,
@@ -89,12 +90,12 @@ export default function EventsPage() {
             together.
           </p>
 
-          <a
-            href="/careers#open-positions"
-            className="mt-8 inline-flex items-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand/90"
-          >
-            Explore Open Positions
-          </a>
+         <Link
+  href="/careers"
+  className="mt-8 inline-flex items-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand/90"
+>
+  Explore Open Positions
+</Link>
         </div>
       </section>
     </main>
