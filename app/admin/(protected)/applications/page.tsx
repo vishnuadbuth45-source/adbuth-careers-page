@@ -2,25 +2,6 @@ import Link from "next/link";
 import { Container } from "@/components/shared/container";
 import { Typography } from "@/components/shared/typography";
 import { createClient } from "@/lib/supabase/server";
-import { DeleteApplicationButton } from "@/components/admin/deletion-button";
-
-type ApplicationRow = {
-  id: string;
-  full_name: string;
-  email: string;
-  resume_url: string | null;
-  created_at: string;
-  jobs?: {
-    title?: string | null;
-  } | null;
-};
-
-type Props = {
-  searchParams: Promise<{
-    search?: string;
-  }>;
-};
-
 
 export const dynamic = "force-dynamic";
 
@@ -28,101 +9,99 @@ export const metadata = {
   title: "Admin Applications",
 };
 
-export default async function AdminApplicationsPage({
-  searchParams,
-}: Props) {
-  const { search = "" } = await searchParams;
+type JobWithCount = {
+  id: string;
+  title: string;
+  department: string;
+  location: string;
+  published: boolean;
+  created_at: string;
+  applications: { count: number }[];
+};
 
+export default async function AdminApplicationsPage() {
   const supabase = await createClient();
 
-  let query = supabase
-    .from("applications")
-    .select("*, jobs:job_id(id,title)")
+  const { data: jobs, error } = await supabase
+    .from("jobs")
+    .select(
+      `
+      id,
+      title,
+      department,
+      location,
+      published,
+      created_at,
+      applications(count)
+    `
+    )
     .order("created_at", { ascending: false });
 
-  if (search) {
-    query = query.or(
-      `full_name.ilike.%${search}%,email.ilike.%${search}%`
-    );
+  if (error) {
+    console.error(error);
   }
 
-  const { data: applications } = await query;
-
-  const typedApplications = (applications ?? []) as ApplicationRow[];
+  const typedJobs = (jobs ?? []) as JobWithCount[];
 
   return (
     <Container className="space-y-6 py-10">
-      
       <div className="space-y-2">
         <Typography variant="h2" as="h1">
-          Applications management
+          Applications
         </Typography>
         <Typography variant="muted" as="p">
-          Review candidate submissions in a read-only admin view.
+          Select a job to review its applications.
         </Typography>
       </div>
-
-      <form className="flex gap-3">
-  <input
-    type="text"
-    name="search"
-    defaultValue={search}
-    placeholder="Search candidate..."
-    className="w-full rounded-md border px-3 py-2"
-  />
-
-  <button
-    type="submit"
-    className="rounded-md bg-primary px-4 py-2 text-primary-foreground"
-  >
-    Search
-  </button>
-</form>
 
       <div className="overflow-hidden rounded-xl border border-border bg-surface">
         <table className="min-w-full divide-y divide-border text-sm">
           <thead className="bg-muted/40">
             <tr>
-              <th className="px-4 py-3 text-left font-medium">Candidate</th>
-              <th className="px-4 py-3 text-left font-medium">Job Applied</th>
-              <th className="px-4 py-3 text-left font-medium">Applied On</th>
-              <th className="px-4 py-3 text-left font-medium">Resume</th>
-              <th className="px-4 py-3 text-left font-medium">View</th>
+              <th className="px-4 py-3 text-left font-medium">Job Title</th>
+              <th className="px-4 py-3 text-left font-medium">Department</th>
+              <th className="px-4 py-3 text-left font-medium">Location</th>
+              <th className="px-4 py-3 text-left font-medium">Status</th>
+              <th className="px-4 py-3 text-left font-medium">Applications</th>
+              <th className="px-4 py-3 text-left font-medium"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
-            {typedApplications.length ? (
-              typedApplications.map((application) => (
-                <tr key={application.id}>
-                  <td className="px-4 py-3">
-                    <div className="font-medium">{application.full_name}</div>
-                    <div className="text-muted-foreground">{application.email}</div>
-                  </td>
-                  <td className="px-4 py-3">{application.jobs?.title ?? "Unknown role"}</td>
-                  <td className="px-4 py-3">{new Date(application.created_at).toLocaleDateString()}</td>
-                  <td className="px-4 py-3">
-                    {application.resume_url ? (
-                      <a href={application.resume_url} target="_blank" rel="noreferrer" className="text-primary underline-offset-4 hover:underline">
-                        Download
-                      </a>
-                    ) : (
-                      <span className="text-muted-foreground">—</span>
-                    )}
-                  </td>
-                  <td className="px-4 py-3">
-                    <Link href={`/admin/applications/${application.id}`} className="text-primary underline-offset-4 hover:underline">
-                      View
-                    </Link>
-                  </td>
-                  <td>
-                    <DeleteApplicationButton id={application.id} />
+            {typedJobs.length ? (
+              typedJobs.map((job) => {
+                const count = job.applications?.[0]?.count ?? 0;
+
+                return (
+                  <tr key={job.id}>
+                    <td className="px-4 py-3 font-medium">{job.title}</td>
+                    <td className="px-4 py-3">{job.department}</td>
+                    <td className="px-4 py-3">{job.location}</td>
+                    <td className="px-4 py-3">
+                      {job.published ? (
+                        <span className="text-green-600">Published</span>
+                      ) : (
+                        <span className="text-muted-foreground">Draft</span>
+                      )}
                     </td>
-                </tr>
-              ))
+                    <td className="px-4 py-3">{count}</td>
+                    <td className="px-4 py-3">
+                      <Link
+                        href={`/admin/applications/${job.id}`}
+                        className="text-primary underline-offset-4 hover:underline"
+                      >
+                        View applications →
+                      </Link>
+                    </td>
+                  </tr>
+                );
+              })
             ) : (
               <tr>
-                <td colSpan={5} className="px-4 py-8 text-center text-muted-foreground">
-                  No applications received yet.
+                <td
+                  colSpan={6}
+                  className="px-4 py-8 text-center text-muted-foreground"
+                >
+                  No jobs found.
                 </td>
               </tr>
             )}
