@@ -25,6 +25,7 @@ type PublishedJob = {
   experience: string;
   short_description: string;
   slug: string;
+  updated_at: string | null;
 };
 
 export const dynamic = "force-dynamic";
@@ -265,31 +266,66 @@ export default async function CareersPage() {
 
           {jobs.length ? (
             <div className="grid gap-5 lg:grid-cols-2">
-              {jobs.map((job) => (
-                <Card key={job.id} className="transition-all duration-300 hover:-translate-y-1 hover:border-brand/40">
-                  <CardHeader>
-                    <div className="flex items-center justify-between gap-3">
-                      <CardTitle>{job.title}</CardTitle>
-                      <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
-                        {job.department}
-                      </span>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
-                      <span>{job.location}</span>
-                      <span>•</span>
-                      <span>{job.employment_type}</span>
-                      <span>•</span>
-                      <span>{job.experience}</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{job.short_description}</p>
-                    <Button asChild variant="outline">
-                      <Link href={`/careers/${job.slug}`}>View Details</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
+             {jobs.map((job) => (
+  <div
+    key={job.id}
+    className="group rounded-2xl border border-border bg-background/70 p-6 transition-all hover:border-primary/30 hover:bg-background"
+  >
+    {/* Header */}
+    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+      <h3 className="text-xl font-semibold tracking-tight text-foreground">
+        {job.title}
+      </h3>
+
+      {job.updated_at && (
+        <span className="shrink-0 text-sm text-muted-foreground sm:pt-1">
+          {new Date(job.updated_at).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+          })}
+        </span>
+      )}
+    </div>
+
+    {/* Job Meta */}
+    <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground">
+      <span className="font-medium text-foreground/80">
+        {job.department}
+      </span>
+
+      <span aria-hidden="true">•</span>
+
+      <span>{job.location}</span>
+
+      <span aria-hidden="true">•</span>
+
+      <span>{job.employment_type}</span>
+
+      <span aria-hidden="true">•</span>
+
+      <span>{job.experience}</span>
+    </div>
+
+    {/* Description */}
+    <p className="mt-4 max-w-3xl text-sm leading-6 text-muted-foreground">
+      {job.short_description}
+    </p>
+
+    {/* Footer */}
+    <div className="mt-6">
+      <Link
+        href={`/careers/${job.slug}`}
+        className="inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+      >
+        View Details
+        <span className="ml-1 transition-transform group-hover:translate-x-1">
+          →
+        </span>
+      </Link>
+    </div>
+  </div>
+))}
             </div>
           ) : (
             <div className="rounded-2xl border border-dashed border-border bg-surface/70 p-10 text-center text-sm text-muted-foreground">
