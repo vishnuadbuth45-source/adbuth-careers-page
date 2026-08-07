@@ -39,12 +39,12 @@ const whyJoinItems = [
 ];
 
 const lifeAtItems = [
-  { title: "Team Photos", description: "A close-knit, global crew that ships with heart.", icon: Users },
-  { title: "Workspace", description: "A modern environment designed for focus and collaboration.", icon: Laptop },
-  { title: "Events", description: "Thoughtful gatherings that strengthen the team experience.", icon: CalendarDays },
-  { title: "Celebrations", description: "Moments that honor wins, milestones, and people.", icon: Trophy },
-  { title: "Hackathons", description: "Creative sprints where ideas become real products.", icon: Sparkles },
-  { title: "Employee Stories", description: "Voices from the people building AdbuthVerse every day.", icon: HeartHandshake },
+  { title: "Team Photos", description: "A close-knit, global crew that ships with heart.", icon: Users ,href:"/careers/life-at-adbuth/team"},
+  { title: "Workspace", description: "A modern environment designed for focus and collaboration.", icon: Laptop ,href:"/careers/life-at-adbuth/workspace"},
+  { title: "Events", description: "Thoughtful gatherings that strengthen the team experience.", icon: CalendarDays ,href:"/careers/life-at-adbuth/events"},
+  { title: "Celebrations", description: "Moments that honor wins, milestones, and people.", icon: Trophy ,href:"/careers/life-at-adbuth/celebrations"},
+  { title: "Hackathons", description: "Creative sprints where ideas become real products.", icon: Sparkles ,href:"/careers/life-at-adbuth/hackathons"},
+  { title: "Employee Stories", description: "Voices from the people building AdbuthVerse every day.", icon: HeartHandshake ,href:"/careers/life-at-adbuth/employ-stories"},
 ];
 
 const benefits = [
@@ -180,32 +180,43 @@ export default async function CareersPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {lifeAtItems.map((item, index) => {
-              const Icon = item.icon;
-              const images = [image1, image2, image3, image4, image5, image6, image7, image8];
-              const image = images[index % images.length];
+           {lifeAtItems.map((item, index) => {
+  const Icon = item.icon;
+  const images = [image1, image2, image3, image4, image5, image6, image7, image8];
+  const image = images[index % images.length];
 
-              return (
-                <div key={item.title} className="overflow-hidden rounded-2xl border border-border bg-surface/70 shadow-sm transition-transform duration-300 hover:-translate-y-1">
-                  <div className="relative h-52 w-full">
-                    <Image
-                      src={image}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="font-semibold">{item.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
-                  </div>
-                </div>
-              );
-            })}
+  return (
+    <Link
+      key={item.title}
+      href={item.href}
+      className="group block overflow-hidden rounded-2xl border border-border bg-surface/70 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-md"
+    >
+      <div className="relative h-52 w-full overflow-hidden">
+        <Image
+          src={image}
+          alt={item.title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
+
+      <div className="p-6">
+        <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand transition-transform duration-300 group-hover:scale-110">
+          <Icon className="h-5 w-5" />
+        </div>
+
+        <h3 className="font-semibold">
+          {item.title}
+        </h3>
+
+        <p className="mt-2 text-sm text-muted-foreground">
+          {item.description}
+        </p>
+      </div>
+    </Link>
+  );
+})}
           </div>
         </Container>
       </section>
