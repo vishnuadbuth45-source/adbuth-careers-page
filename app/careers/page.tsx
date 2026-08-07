@@ -137,7 +137,7 @@ export default async function CareersPage() {
         </Container>
       </section>
 
-      <section id="why-join" className="border-b border-border bg-surface/50 py-24">
+      <section id="why-join" className="border-b border-border bg-surface/50 py-24 section-gradient border-b border-border" >
         <Container className="space-y-10 px-6 lg:px-8">
           <div className="max-w-2xl space-y-3">
             <Typography variant="h2" as="h2">
@@ -168,7 +168,7 @@ export default async function CareersPage() {
         </Container>
       </section>
 
-      <section id="life-at" className="border-b border-border py-24">
+      <section id="life-at" className="border-b border-border py-24 section-gradient border-b border-border" >
         <Container className="space-y-10 px-6 lg:px-8">
           <div className="max-w-2xl space-y-3">
             <Typography variant="h2" as="h2">
@@ -221,7 +221,7 @@ export default async function CareersPage() {
         </Container>
       </section>
 
-      <section id="benefits" className="border-b border-border bg-surface/50 py-24">
+      <section id="benefits" className="border-b border-border bg-surface/50 py-24 section-gradient border-b border-border">
         <Container className="space-y-10 px-6 lg:px-8">
           <div className="max-w-2xl space-y-3">
             <Typography variant="h2" as="h2">
@@ -252,7 +252,7 @@ export default async function CareersPage() {
         </Container>
       </section>
 
-      <section id="open-positions" className="border-b border-border py-24">
+      <section id="open-positions" className="border-b border-border py-24  section-gradient border-b border-border">
         <Container className="space-y-10 px-6 lg:px-8">
           <div className="max-w-2xl space-y-3">
             <Typography variant="h2" as="h2">
@@ -299,7 +299,7 @@ export default async function CareersPage() {
         </Container>
       </section>
 
-      <section className="border-b border-border bg-surface/50 py-24">
+      <section className="border-b border-border bg-surface/50 py-24 section-gradient border-b border-border">
         <Container className="space-y-10 px-6 lg:px-8">
           <div className="max-w-2xl space-y-3">
             <Typography variant="h2" as="h2">
@@ -330,7 +330,7 @@ export default async function CareersPage() {
         </Container>
       </section>
 
-      <section className="py-24">
+      <section className="py-24 section-gradient border-b border-border">
         <Container className="space-y-10 px-6 lg:px-8">
           <div className="max-w-2xl space-y-3">
             <Typography variant="h2" as="h2">
@@ -353,7 +353,7 @@ export default async function CareersPage() {
         </Container>
       </section>
 
-      <section id="contact" className="border-t border-border bg-surface/70 py-24">
+      <section id="contact" className="border-t border-border bg-surface/70 py-24 section-gradient border-b border-border">
         <Container className="px-6 lg:px-8">
           <div className="grid gap-8 rounded-[2rem] border border-border bg-background p-8 shadow-sm lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
             <div className="space-y-4">
@@ -385,7 +385,7 @@ export default async function CareersPage() {
         </Container>
       </section>
 
-      <section className="border-t border-border bg-surface/70 py-24">
+      <section className="border-t border-border bg-surface/70 py-24 section-gradient border-b border-border">
         <Container className="px-6 lg:px-8">
           <div className="rounded-[2rem] border border-border bg-gradient-to-br from-primary/10 via-background to-brand/10 p-8 text-center shadow-sm sm:p-12">
             <div className="mx-auto max-w-2xl space-y-5">
