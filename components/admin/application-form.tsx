@@ -67,7 +67,7 @@ export function ApplicationForm({ jobId, onSuccess }: ApplicationFormProps) {
         },
         resumeFile
       );
-
+      alert("Your application has been submitted successfully.");
       setSuccess(true);
       setForm({
         full_name: "",
@@ -140,7 +140,7 @@ export function ApplicationForm({ jobId, onSuccess }: ApplicationFormProps) {
 
       <label className="block space-y-2 text-sm">
         <span className="font-medium">Cover Letter</span>
-        <textarea rows={6} value={form.cover_letter} onChange={(event) => updateField("cover_letter", event.target.value)} className="w-full rounded-md border border-input bg-background px-3 py-2" />
+        <textarea rows={10} value={form.cover_letter} onChange={(event) => updateField("cover_letter", event.target.value)} className="w-full rounded-md border border-input bg-background px-3 py-2" />
       </label>
 
       <div className="flex justify-end">
