@@ -14,7 +14,7 @@ import image5 from "@/assets/5.webp";
 import image6 from "@/assets/6.webp";
 import image7 from "@/assets/7.webp";
 import image8 from "@/assets/8.webp";
-import { ArrowRight, Brain, BriefcaseBusiness, Compass, Crown, GraduationCap, HeartHandshake, Lightbulb, Rocket, Sparkles, Users, Workflow, ShieldCheck, Laptop, CalendarDays, Trophy, BadgeCheck, Clock3 } from "lucide-react";
+import { ArrowRight, Brain,Briefcase, BriefcaseBusiness, Compass, Crown, GraduationCap, HeartHandshake, Lightbulb, Rocket, Sparkles, Users, Workflow, ShieldCheck, Laptop, CalendarDays, Trophy, BadgeCheck, Clock3, ArrowUpRight, Linkedin, Mail } from "lucide-react";
 
 type PublishedJob = {
   id: string;
@@ -88,359 +88,961 @@ export default async function CareersPage() {
 
   return (
     <main className="overflow-hidden bg-background text-foreground">
-      <section className="relative isolate overflow-hidden border-b border-border">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.16),_transparent_45%),radial-gradient(circle_at_bottom_right,_rgba(147,197,253,0.15),_transparent_40%)]" />
-        <Container className="relative grid gap-10 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-32">
-          <div className="max-w-2xl space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/80 px-3 py-1 text-sm text-muted-foreground backdrop-blur">
-              <Sparkles className="h-4 w-4 text-brand" />
-              Building the future of digital experiences
-            </div>
-            <div className="space-y-4">
-              <Typography variant="h1" as="h1" className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                Join a company that turns bold ideas into meaningful products.
-              </Typography>
-              <Typography variant="lead" as="p" className="max-w-2xl text-lg text-muted-foreground sm:text-xl">
-                AdbuthVerse is where product craft, experimentation, and ownership come together to create work that matters.
-              </Typography>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg" className="group">
-                <Link href="#open-positions">
-                  Explore Opportunities
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="#why-join">Discover the culture</Link>
-              </Button>
-            </div>
-          </div>
-          <div className="relative min-h-[360px] overflow-hidden rounded-3xl border border-border bg-surface/70 p-4 shadow-2xl shadow-black/10 backdrop-blur">
-            <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(99,102,241,0.25),_transparent_55%,_rgba(34,211,238,0.2))]" />
-            <div className="relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-8 text-white">
-              <div className="space-y-4">
-                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-sm">
-                  <Brain className="h-4 w-4" />
-                  Premium team, world-class craft
-                </div>
-                <Typography variant="h3" as="h2" className="max-w-md text-2xl font-semibold sm:text-3xl">
-                  Collaborate with builders who care deeply about design, speed, and impact.
-                </Typography>
-              </div>
-              <div className="flex flex-wrap gap-3 text-sm text-slate-300">
-                <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1">Remote-first mindset</span>
-                <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1">High ownership</span>
-                <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1">Learning-led growth</span>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+<section className="relative isolate overflow-hidden border-b border-border/60">
+  {/* Ambient background */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-3xl" />
+    <div className="absolute -bottom-40 right-0 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-3xl" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.10),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_40%)]" />
+  </div>
 
-      <section id="why-join" className="border-b border-border bg-surface/50 py-24 section-gradient border-b border-border" >
-        <Container className="space-y-10 px-6 lg:px-8">
-          <div className="max-w-2xl space-y-3">
-            <Typography variant="h2" as="h2">
-              Why Join AdbuthVerse
-            </Typography>
-            <Typography variant="muted" as="p" className="text-lg">
-              The reasons people stay and grow are the same reasons they’re excited to join.
-            </Typography>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {whyJoinItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Card key={item.title} className="group transition-all duration-300 hover:-translate-y-1 hover:border-brand/40">
-                  <CardHeader>
-                    <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <CardTitle>{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </Container>
-      </section>
-
-      <section id="life-at" className="border-b border-border py-24 section-gradient border-b border-border" >
-        <Container className="space-y-10 px-6 lg:px-8">
-          <div className="max-w-2xl space-y-3">
-            <Typography variant="h2" as="h2">
-              Life at AdbuthVerse
-            </Typography>
-            <Typography variant="muted" as="p" className="text-lg">
-              A blend of thoughtful collaboration, inspiring moments, and people-first energy.
-            </Typography>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-           {lifeAtItems.map((item, index) => {
-  const Icon = item.icon;
-  const images = [image1, image2, image3, image4, image5, image6, image7, image8];
-  const image = images[index % images.length];
-
-  return (
-    <Link
-      key={item.title}
-      href={item.href}
-      className="group block overflow-hidden rounded-2xl border border-border bg-surface/70 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-md"
-    >
-      <div className="relative h-52 w-full overflow-hidden">
-        <Image
-          src={image}
-          alt={item.title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
-
-      <div className="p-6">
-        <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand transition-transform duration-300 group-hover:scale-110">
-          <Icon className="h-5 w-5" />
+  <Container className="relative grid gap-14 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-20 lg:px-8 lg:py-28">
+    {/* Left — Hero content */}
+    <div className="max-w-3xl">
+      <div className="space-y-8">
+        {/* Eyebrow */}
+        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/5 px-3.5 py-1.5 text-sm font-medium text-blue-600 dark:text-blue-400">
+          <Sparkles className="h-4 w-4" />
+          Building the future of digital experiences
         </div>
 
-        <h3 className="font-semibold">
-          {item.title}
-        </h3>
+        {/* Heading */}
+        <div className="space-y-5">
+          <Typography
+            variant="h1"
+            as="h1"
+            className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:text-6xl xl:text-[4.25rem]"
+          >
+            Join a company that turns bold ideas into{" "}
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">
+              meaningful products.
+            </span>
+          </Typography>
 
-        <p className="mt-2 text-sm text-muted-foreground">
-          {item.description}
-        </p>
+          <Typography
+            variant="lead"
+            as="p"
+            className="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8"
+          >
+            AdbuthVerse is where product craft, experimentation, and
+            ownership come together to create work that matters.
+          </Typography>
+        </div>
+
+        {/* Actions */}
+        <div className="flex flex-wrap items-center gap-3 pt-1">
+          <Button asChild size="lg" className="group shadow-lg shadow-primary/10">
+            <Link href="#open-positions">
+              Explore Opportunities
+              <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
+          </Button>
+
+          <Button asChild variant="outline" size="lg" className="bg-background/60">
+            <Link href="#why-join">Discover the culture</Link>
+          </Button>
+        </div>
+
+        {/* Small supporting detail */}
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-3 text-sm text-muted-foreground">
+          <span className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            People-first culture
+          </span>
+
+          <span className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+            Meaningful ownership
+          </span>
+
+          <span className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-violet-500" />
+            Built to grow
+          </span>
+        </div>
       </div>
-    </Link>
-  );
-})}
-          </div>
-        </Container>
-      </section>
+    </div>
 
-      <section id="benefits" className="border-b border-border bg-surface/50 py-24 section-gradient border-b border-border">
-        <Container className="space-y-10 px-6 lg:px-8">
-          <div className="max-w-2xl space-y-3">
-            <Typography variant="h2" as="h2">
-              Benefits & Perks
-            </Typography>
-            <Typography variant="muted" as="p" className="text-lg">
-              Designed to support people as professionals, teammates, and humans.
-            </Typography>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {benefits.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Card key={item.title} className="transition-all duration-300 hover:-translate-y-1 hover:border-brand/40">
-                  <CardHeader>
-                    <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-foreground">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <CardTitle>{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </Container>
-      </section>
+    {/* Right — Visual panel */}
+    <div className="relative">
+      {/* Glow behind card */}
+      <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-blue-500/10 via-indigo-500/5 to-cyan-400/10 blur-2xl" />
 
-      <section id="open-positions" className="border-b border-border py-24  section-gradient border-b border-border">
-        <Container className="space-y-10 px-6 lg:px-8">
-          <div className="max-w-2xl space-y-3">
-            <Typography variant="h2" as="h2">
-              Open Positions
-            </Typography>
-            <Typography variant="muted" as="p" className="text-lg">
-              Explore the roles where your next chapter can begin.
-            </Typography>
+      <div className="relative overflow-hidden rounded-[2rem] border border-border/60 bg-background/70 p-2 shadow-2xl shadow-black/10 backdrop-blur-xl">
+        {/* Inner card */}
+        <div className="relative min-h-[390px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-7 text-white sm:p-9">
+          {/* Decorative gradients */}
+          <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-cyan-400/10 blur-3xl" />
+
+          {/* Subtle grid */}
+          <div className="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.5)_1px,transparent_1px)] [background-size:32px_32px]" />
+
+          <div className="relative flex min-h-[340px] flex-col justify-between">
+            {/* Top */}
+            <div className="space-y-7">
+              <div className="flex items-center justify-between">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.07] px-3 py-1.5 text-xs font-medium text-slate-200 backdrop-blur">
+                  <Brain className="h-3.5 w-3.5 text-blue-300" />
+                  World-class craft
+                </div>
+
+                <div className="flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  <span className="text-xs text-slate-400">Building</span>
+                </div>
+              </div>
+
+              <div className="max-w-md space-y-4">
+                <Typography
+                  variant="h3"
+                  as="h2"
+                  className="text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl"
+                >
+                  Work with builders who care about{" "}
+                  <span className="text-blue-300">what they create.</span>
+                </Typography>
+
+                <p className="max-w-sm text-sm leading-6 text-slate-400">
+                  Bring your ideas, challenge assumptions, and help turn
+                  ambitious thinking into products people genuinely value.
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom */}
+            <div className="space-y-5">
+              <div className="h-px bg-gradient-to-r from-white/10 via-white/10 to-transparent" />
+
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Remote-first",
+                  "High ownership",
+                  "Continuous learning",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-slate-300 backdrop-blur"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
 
-          {jobs.length ? (
-            <div className="grid gap-5 lg:grid-cols-2">
-             {jobs.map((job) => (
-  <div
-    key={job.id}
-    className="group rounded-2xl border border-border bg-background/70 p-6 transition-all hover:border-primary/30 hover:bg-background"
-  >
-    {/* Header */}
-    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-      <h3 className="text-xl font-semibold tracking-tight text-foreground">
-        {job.title}
-      </h3>
+<section
+  id="why-join"
+  className="relative isolate overflow-hidden border-b border-border/60 bg-surface/40 py-24 lg:py-28"
+>
+  {/* Ambient background */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute left-1/4 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-blue-500/[0.06] blur-3xl" />
+    <div className="absolute bottom-0 right-0 h-[350px] w-[450px] rounded-full bg-cyan-400/[0.05] blur-3xl" />
+  </div>
 
-      {job.updated_at && (
-        <span className="shrink-0 text-sm text-muted-foreground sm:pt-1">
-          {new Date(job.updated_at).toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
-          })}
-        </span>
+  <Container className="relative space-y-14 px-6 lg:px-8">
+    {/* Section heading */}
+    <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div className="max-w-2xl space-y-4">
+        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
+          <span className="h-px w-6 bg-brand" />
+          Why AdbuthVerse
+        </div>
+
+        <Typography
+          variant="h2"
+          as="h2"
+          className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
+        >
+          A place where great work{" "}
+          <span className="text-muted-foreground">can happen.</span>
+        </Typography>
+
+        <Typography
+          variant="muted"
+          as="p"
+          className="max-w-xl text-base leading-7 sm:text-lg"
+        >
+          The reasons people stay and grow are the same reasons they’re
+          excited to join. We’re building an environment where people can do
+          meaningful work and keep getting better at it.
+        </Typography>
+      </div>
+
+      {/* Small section indicator */}
+      <div className="hidden shrink-0 items-center gap-3 text-sm text-muted-foreground lg:flex">
+        <span className="h-2 w-2 rounded-full bg-emerald-500" />
+        Built for people who care
+      </div>
+    </div>
+
+    {/* Benefits */}
+    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      {whyJoinItems.map((item, index) => {
+        const Icon = item.icon;
+
+        return (
+          <Card
+            key={item.title}
+            className="group relative overflow-hidden border-border/60 bg-background/60 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:bg-background/80 hover:shadow-xl hover:shadow-brand/5"
+          >
+            {/* Hover glow */}
+            <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-brand/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+
+            <CardHeader className="relative pb-4">
+              <div className="flex items-start justify-between">
+                {/* Icon */}
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand transition-all duration-300 group-hover:border-brand/25 group-hover:bg-brand/15 group-hover:scale-105">
+                  <Icon className="h-5 w-5" />
+                </div>
+
+                {/* Number */}
+                <span className="text-xs font-medium tabular-nums text-muted-foreground/40">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              <CardTitle className="pt-3 text-lg font-semibold tracking-tight">
+                {item.title}
+              </CardTitle>
+            </CardHeader>
+
+            <CardContent className="relative">
+              <p className="text-sm leading-6 text-muted-foreground">
+                {item.description}
+              </p>
+            </CardContent>
+
+            {/* Bottom accent */}
+            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-cyan-400 transition-all duration-500 group-hover:w-full" />
+          </Card>
+        );
+      })}
+    </div>
+  </Container>
+</section>
+
+<section
+  id="life-at"
+  className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
+>
+  {/* Ambient background */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute -left-40 top-20 h-[450px] w-[450px] rounded-full bg-blue-500/[0.06] blur-3xl" />
+    <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-cyan-400/[0.05] blur-3xl" />
+  </div>
+
+  <Container className="relative space-y-14 px-6 lg:px-8">
+    {/* Section heading */}
+    <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div className="max-w-2xl space-y-4">
+        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
+          <span className="h-px w-6 bg-brand" />
+          Life at AdbuthVerse
+        </div>
+
+        <Typography
+          variant="h2"
+          as="h2"
+          className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
+        >
+          More than a workplace.
+          <br className="hidden sm:block" />{" "}
+          <span className="text-muted-foreground">
+            It’s where we build together.
+          </span>
+        </Typography>
+
+        <Typography
+          variant="muted"
+          as="p"
+          className="max-w-xl text-base leading-7 sm:text-lg"
+        >
+          A blend of thoughtful collaboration, inspiring moments, and
+          people-first energy.
+        </Typography>
+      </div>
+
+      <div className="hidden items-center gap-3 text-sm text-muted-foreground lg:flex">
+        <span className="h-2 w-2 rounded-full bg-brand" />
+        Inside AdbuthVerse
+      </div>
+    </div>
+
+    {/* Life at cards */}
+    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      {lifeAtItems.map((item, index) => {
+        const Icon = item.icon;
+
+        const images = [
+          image1,
+          image2,
+          image3,
+          image4,
+          image5,
+          image6,
+          image7,
+          image8,
+        ];
+
+        const image = images[index % images.length];
+
+        return (
+          <Link
+            key={item.title}
+            href={item.href}
+            className="group relative overflow-hidden rounded-2xl border border-border/60 bg-background/60 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-brand/30 hover:shadow-2xl hover:shadow-brand/10"
+          >
+            {/* Image */}
+            <div className="relative aspect-[16/10] overflow-hidden">
+              <Image
+  src={image}
+  alt={item.title}
+  fill
+  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+/>
+
+              {/* Image overlays */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-brand/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+              {/* Icon */}
+              <div className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-black/20 text-white backdrop-blur-md transition-all duration-300 group-hover:scale-105 group-hover:bg-brand/80">
+                <Icon className="h-5 w-5" />
+              </div>
+
+              {/* Number */}
+              <span className="absolute right-5 top-5 text-xs font-medium tabular-nums text-white/60">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              {/* Title over image */}
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="text-lg font-semibold tracking-tight text-white">
+                  {item.title}
+                </h3>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="relative p-5">
+              <p className="text-sm leading-6 text-muted-foreground">
+                {item.description}
+              </p>
+
+              {/* Explore indicator */}
+              <div className="mt-5 flex items-center gap-2 text-sm font-medium text-brand">
+                Explore
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </div>
+
+              {/* Bottom accent */}
+              <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-cyan-400 transition-all duration-500 group-hover:w-full" />
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  </Container>
+</section>
+
+
+<section
+  id="benefits"
+  className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
+>
+  {/* Ambient background */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute left-0 top-0 h-[400px] w-[500px] rounded-full bg-indigo-500/[0.05] blur-3xl" />
+    <div className="absolute bottom-0 right-0 h-[400px] w-[500px] rounded-full bg-blue-500/[0.06] blur-3xl" />
+  </div>
+
+  <Container className="relative space-y-14 px-6 lg:px-8">
+    {/* Section heading */}
+    <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div className="max-w-2xl space-y-4">
+        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
+          <span className="h-px w-6 bg-brand" />
+          Benefits & Perks
+        </div>
+
+        <Typography
+          variant="h2"
+          as="h2"
+          className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
+        >
+          Support for the work.
+          <br className="hidden sm:block" />{" "}
+          <span className="text-muted-foreground">
+            And everything around it.
+          </span>
+        </Typography>
+
+        <Typography
+          variant="muted"
+          as="p"
+          className="max-w-xl text-base leading-7 sm:text-lg"
+        >
+          Designed to support people as professionals, teammates, and humans —
+          so you can focus on doing your best work.
+        </Typography>
+      </div>
+
+      <div className="hidden items-center gap-3 text-sm text-muted-foreground lg:flex">
+        <span className="h-2 w-2 rounded-full bg-emerald-500" />
+        People come first
+      </div>
+    </div>
+
+    {/* Benefits grid */}
+    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      {benefits.map((item, index) => {
+        const Icon = item.icon;
+
+        return (
+          <Card
+            key={item.title}
+            className="group relative overflow-hidden border-border/60 bg-background/60 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:bg-background/80 hover:shadow-xl hover:shadow-brand/5"
+          >
+            {/* Soft hover glow */}
+            <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-brand/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+
+            <CardHeader className="relative">
+              <div className="flex items-start justify-between">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand transition-all duration-300 group-hover:scale-105 group-hover:border-brand/25 group-hover:bg-brand/15">
+                  <Icon className="h-5 w-5" />
+                </div>
+
+                <span className="text-xs font-medium tabular-nums text-muted-foreground/40">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              <CardTitle className="pt-4 text-base font-semibold tracking-tight">
+                {item.title}
+              </CardTitle>
+            </CardHeader>
+
+            <CardContent className="relative">
+              <p className="text-sm leading-6 text-muted-foreground">
+                {item.description}
+              </p>
+            </CardContent>
+
+            {/* Bottom hover accent */}
+            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-cyan-400 transition-all duration-500 group-hover:w-full" />
+          </Card>
+        );
+      })}
+    </div>
+  </Container>
+</section>
+
+
+
+<section
+  id="open-positions"
+  className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
+>
+  {/* Ambient background */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute left-0 top-20 h-[450px] w-[500px] rounded-full bg-blue-500/[0.05] blur-3xl" />
+    <div className="absolute bottom-0 right-0 h-[450px] w-[500px] rounded-full bg-cyan-400/[0.05] blur-3xl" />
+  </div>
+
+  <Container className="relative space-y-14 px-6 lg:px-8">
+    {/* Section heading */}
+    <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div className="max-w-2xl space-y-4">
+        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
+          <span className="h-px w-6 bg-brand" />
+          Careers
+        </div>
+
+        <Typography
+          variant="h2"
+          as="h2"
+          className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
+        >
+          Open Positions
+        </Typography>
+
+        <Typography
+          variant="muted"
+          as="p"
+          className="max-w-xl text-base leading-7 sm:text-lg"
+        >
+          Explore the roles where your next chapter can begin.
+        </Typography>
+      </div>
+
+      {jobs.length > 0 && (
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <span className="flex h-7 min-w-7 items-center justify-center rounded-full bg-brand/10 px-2 font-semibold text-brand">
+            {jobs.length}
+          </span>
+          <span>{jobs.length === 1 ? "open role" : "open roles"}</span>
+        </div>
       )}
     </div>
 
-    {/* Job Meta */}
-    <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground">
-      <span className="font-medium text-foreground/80">
-        {job.department}
-      </span>
+    {/* Job listings */}
+    {jobs.length ? (
+      <div className="grid gap-4 lg:grid-cols-2">
+        {jobs.map((job) => (
+          <Link
+            key={job.id}
+            href={`/careers/${job.slug}`}
+            className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-background/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:bg-background/80 hover:shadow-2xl hover:shadow-brand/5 sm:p-7"
+          >
+            {/* Hover glow */}
+            <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-brand/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
-      <span aria-hidden="true">•</span>
+            {/* Top row */}
+            <div className="relative flex items-start justify-between gap-6">
+              <div className="min-w-0">
+                <h3 className="text-xl font-semibold leading-tight tracking-tight text-foreground transition-colors group-hover:text-brand sm:text-2xl">
+                  {job.title}
+                </h3>
 
-      <span>{job.location}</span>
+                {job.department && (
+                  <p className="mt-2 text-sm font-medium text-brand/90">
+                    {job.department}
+                  </p>
+                )}
+              </div>
 
-      <span aria-hidden="true">•</span>
+              {job.updated_at && (
+                <time
+                  dateTime={job.updated_at}
+                  className="shrink-0 whitespace-nowrap text-xs font-medium text-muted-foreground/70"
+                >
+                  Updated{" "}
+                  {new Date(job.updated_at).toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </time>
+              )}
+            </div>
 
-      <span>{job.employment_type}</span>
+            {/* Metadata */}
+            <div className="relative mt-5 flex flex-wrap gap-2">
+              {[
+                job.location,
+                job.employment_type,
+                job.experience,
+              ]
+                .filter(Boolean)
+                .map((meta) => (
+                  <span
+                    key={meta}
+                    className="rounded-full border border-border/70 bg-muted/40 px-3 py-1 text-xs font-medium text-muted-foreground"
+                  >
+                    {meta}
+                  </span>
+                ))}
+            </div>
 
-      <span aria-hidden="true">•</span>
+            {/* Description */}
+            <p className="relative mt-5 line-clamp-3 text-sm leading-6 text-muted-foreground">
+              {job.short_description}
+            </p>
 
-      <span>{job.experience}</span>
-    </div>
+            {/* Footer */}
+            <div className="relative mt-auto pt-7">
+              <div className="flex items-center justify-between border-t border-border/60 pt-5">
+                <span className="text-sm font-semibold text-foreground transition-colors group-hover:text-brand">
+                  View Details
+                </span>
 
-    {/* Description */}
-    <p className="mt-4 max-w-3xl text-sm leading-6 text-muted-foreground">
-      {job.short_description}
-    </p>
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-border/70 bg-background transition-all duration-300 group-hover:border-brand/30 group-hover:bg-brand/10">
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </div>
+            </div>
 
-    {/* Footer */}
-    <div className="mt-6">
-      <Link
-        href={`/careers/${job.slug}`}
-        className="inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-      >
-        View Details
-        <span className="ml-1 transition-transform group-hover:translate-x-1">
-          →
-        </span>
-      </Link>
-    </div>
+            {/* Bottom hover accent */}
+            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand via-blue-500 to-cyan-400 transition-all duration-500 group-hover:w-full" />
+          </Link>
+        ))}
+      </div>
+    ) : (
+      /* Empty state */
+      <div className="relative overflow-hidden rounded-2xl border border-dashed border-border/70 bg-background/40 px-6 py-16 text-center sm:px-10">
+        <div className="mx-auto flex max-w-md flex-col items-center">
+          <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand">
+            <Briefcase className="h-5 w-5" />
+          </div>
+
+          <h3 className="text-lg font-semibold">
+            No open positions right now
+          </h3>
+
+          <p className="mt-2 text-sm leading-6 text-muted-foreground">
+            We don&apost have any open roles at the moment, but we&aposre always
+            interested in meeting talented people.
+          </p>
+        </div>
+      </div>
+    )}
+  </Container>
+</section>
+
+
+<section
+  id="hiring-process"
+  className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
+>
+  {/* Ambient background */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute left-1/3 top-0 h-[400px] w-[500px] rounded-full bg-violet-500/[0.05] blur-3xl" />
+    <div className="absolute bottom-0 right-0 h-[400px] w-[500px] rounded-full bg-blue-500/[0.05] blur-3xl" />
   </div>
-))}
-            </div>
-          ) : (
-            <div className="rounded-2xl border border-dashed border-border bg-surface/70 p-10 text-center text-sm text-muted-foreground">
-              No positions are live right now. Please check back soon.
-            </div>
-          )}
-        </Container>
-      </section>
 
-      <section className="border-b border-border bg-surface/50 py-24 section-gradient border-b border-border">
-        <Container className="space-y-10 px-6 lg:px-8">
-          <div className="max-w-2xl space-y-3">
-            <Typography variant="h2" as="h2">
-              Hiring Process
-            </Typography>
-            <Typography variant="muted" as="p" className="text-lg">
-              A clear, intentional path from first interest to welcome aboard.
-            </Typography>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {[
-              ["1", "Apply", "Share your background and interest in the role."],
-              ["2", "Resume Review", "We assess fit, experience, and motivation."],
-              ["3", "Initial Interview", "An introduction to your story and our mission."],
-              ["4", "Technical Round", "A deeper conversation around craft and delivery."],
-              ["5", "Final Discussion", "Alignment on growth, expectations, and impact."],
-              ["6", "Offer & Onboarding", "A thoughtful welcome into the team."],
-            ].map(([step, title, description]) => (
-              <div key={title} className="rounded-2xl border border-border bg-background p-6 shadow-sm">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-sm font-semibold text-brand">
-                  {step}
-                </div>
-                <h3 className="font-semibold">{title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{description}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+  <Container className="relative space-y-14 px-6 lg:px-8">
+    {/* Section heading */}
+    <div className="max-w-2xl space-y-4">
+      <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
+        <span className="h-px w-6 bg-brand" />
+        How it works
+      </div>
 
-      <section className="py-24 section-gradient border-b border-border">
-        <Container className="space-y-10 px-6 lg:px-8">
-          <div className="max-w-2xl space-y-3">
-            <Typography variant="h2" as="h2">
-              Frequently Asked Questions
-            </Typography>
-            <Typography variant="muted" as="p" className="text-lg">
-              Clear answers for curious applicants.
-            </Typography>
-          </div>
-          <div className="rounded-2xl border border-border bg-surface/70 p-4">
-            <Accordion>
-              {faqs.map((faq) => (
-                <AccordionItem key={faq.question}>
-                  <AccordionTrigger>{faq.question}</AccordionTrigger>
-                  <AccordionContent>{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </Container>
-      </section>
+      <Typography
+        variant="h2"
+        as="h2"
+        className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
+      >
+        Hiring Process
+      </Typography>
 
-      <section id="contact" className="border-t border-border bg-surface/70 py-24 section-gradient border-b border-border">
-        <Container className="px-6 lg:px-8">
-          <div className="grid gap-8 rounded-[2rem] border border-border bg-background p-8 shadow-sm lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
-            <div className="space-y-4">
-              <Typography variant="h2" as="h2">
-                Contact the team
-              </Typography>
-              <Typography variant="muted" as="p" className="text-lg">
-                Have a question about a role, the company, or the hiring process? We’d love to hear from you.
-              </Typography>
-            </div>
-            <div className="space-y-4 rounded-2xl border border-border bg-surface/70 p-6">
-              <div>
-                <p className="text-sm font-semibold text-foreground">Email</p>
-                <a href="mailto:careers@adbuthverse.com" className="mt-1 text-sm text-primary hover:underline">
-                  careers@adbuthverse.com
-                </a>
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-foreground">LinkedIn</p>
-                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="mt-1 text-sm text-primary hover:underline">
-                  linkedin.com/company/adbuthverse
-                </a>
-              </div>
-              <Button asChild size="lg" className="w-full sm:w-auto">
-                <a href="mailto:careers@adbuthverse.com">Send a Message</a>
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <Typography
+        variant="muted"
+        as="p"
+        className="max-w-xl text-base leading-7 sm:text-lg"
+      >
+        A clear, intentional path from first interest to welcome aboard.
+        No unnecessary hoops, just meaningful conversations.
+      </Typography>
+    </div>
 
-      <section className="border-t border-border bg-surface/70 py-24 section-gradient border-b border-border">
-        <Container className="px-6 lg:px-8">
-          <div className="rounded-[2rem] border border-border bg-gradient-to-br from-primary/10 via-background to-brand/10 p-8 text-center shadow-sm sm:p-12">
-            <div className="mx-auto max-w-2xl space-y-5">
-              <Typography variant="h2" as="h2">
-                Ready to build something meaningful?
-              </Typography>
-              <Typography variant="muted" as="p" className="text-lg">
-                Explore the current opportunities and take the next step toward your future at AdbuthVerse.
-              </Typography>
-              <Button asChild size="lg" className="group">
-                <Link href="#open-positions">
-                  Explore Open Positions
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
+    {/* Process */}
+    <div className="relative">
+      {/* Connecting line — desktop */}
+      <div className="absolute left-[2.125rem] top-8 hidden h-[calc(100%-4rem)] w-px bg-gradient-to-b from-brand/40 via-border to-transparent xl:block" />
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-10 xl:gap-y-8">
+        {[
+          ["1", "Apply", "Share your background and interest in the role."],
+          ["2", "Resume Review", "We assess fit, experience, and motivation."],
+          ["3", "Initial Interview", "An introduction to your story and our mission."],
+          ["4", "Technical Round", "A deeper conversation around craft and delivery."],
+          ["5", "Final Discussion", "Alignment on growth, expectations, and impact."],
+          ["6", "Offer & Onboarding", "A thoughtful welcome into the team."],
+        ].map(([step, title, description]) => (
+          <div
+            key={title}
+            className="group relative flex gap-5 rounded-2xl border border-border/60 bg-background/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:bg-background/80 hover:shadow-xl hover:shadow-brand/5"
+          >
+            {/* Step number */}
+            <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand/20 bg-brand/10 text-sm font-semibold text-brand transition-all duration-300 group-hover:border-brand/40 group-hover:bg-brand/15 group-hover:scale-105">
+              {step}
             </div>
+
+            {/* Content */}
+            <div className="min-w-0 pt-0.5">
+              <h3 className="font-semibold tracking-tight text-foreground">
+                {title}
+              </h3>
+
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                {description}
+              </p>
+            </div>
+
+            {/* Hover accent */}
+            <div className="absolute bottom-0 left-5 right-5 h-px scale-x-0 bg-gradient-to-r from-brand to-cyan-400 transition-transform duration-500 group-hover:scale-x-100" />
           </div>
-        </Container>
-      </section>
+        ))}
+      </div>
+    </div>
+
+    {/* Reassurance */}
+    <div className="flex flex-col gap-3 rounded-2xl border border-border/60 bg-muted/20 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p className="font-medium">We value your time.</p>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Every conversation has a purpose, and we’ll keep you informed
+          throughout the process.
+        </p>
+      </div>
+
+      <div className="flex shrink-0 items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400">
+        <span className="h-2 w-2 rounded-full bg-emerald-500" />
+        Transparent process
+      </div>
+    </div>
+  </Container>
+</section>
+
+
+<section
+  id="faq"
+  className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
+>
+  {/* Ambient background */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-blue-500/[0.05] blur-3xl" />
+    <div className="absolute bottom-0 left-0 h-[350px] w-[350px] rounded-full bg-cyan-400/[0.04] blur-3xl" />
+  </div>
+
+  <Container className="relative px-6 lg:px-8">
+    <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
+      {/* Heading */}
+      <div className="max-w-md space-y-5 lg:sticky lg:top-24 lg:self-start">
+        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
+          <span className="h-px w-6 bg-brand" />
+          FAQ
+        </div>
+
+        <Typography
+          variant="h2"
+          as="h2"
+          className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
+        >
+          Frequently Asked Questions
+        </Typography>
+
+        <Typography
+          variant="muted"
+          as="p"
+          className="text-base leading-7 sm:text-lg"
+        >
+          Clear answers for curious applicants. If you still have questions,
+          we’d be happy to hear from you.
+        </Typography>
+
+        <div className="flex items-center gap-2 pt-2 text-sm text-muted-foreground">
+          <span className="h-2 w-2 rounded-full bg-emerald-500" />
+          Everything you need to know
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="overflow-hidden rounded-2xl border border-border/60 bg-background/50 p-2 shadow-sm backdrop-blur-sm">
+        <Accordion>
+          {faqs.map((faq, index) => (
+            <AccordionItem
+              key={faq.question}
+              className="border-b border-border/50 last:border-b-0"
+            >
+              <AccordionTrigger className="group px-5 py-5 text-left text-base font-medium tracking-tight hover:no-underline sm:px-6 sm:py-6">
+                <span className="flex items-start gap-4">
+                  <span className="mt-0.5 shrink-0 text-xs font-medium tabular-nums text-muted-foreground/40">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <span className="transition-colors duration-200 group-hover:text-brand">
+                    {faq.question}
+                  </span>
+                </span>
+              </AccordionTrigger>
+
+              <AccordionContent className="px-5 pb-6 pl-[3.25rem] text-sm leading-7 text-muted-foreground sm:px-6 sm:pl-[3.5rem]">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<section
+  id="contact"
+  className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
+>
+  {/* Ambient background */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute left-1/4 top-1/2 h-[500px] w-[700px] -translate-y-1/2 rounded-full bg-blue-500/[0.07] blur-3xl" />
+    <div className="absolute right-0 top-0 h-[350px] w-[350px] rounded-full bg-cyan-400/[0.06] blur-3xl" />
+  </div>
+
+  <Container className="relative px-6 lg:px-8">
+    <div className="relative overflow-hidden rounded-[2rem] border border-border/60 bg-background/70 shadow-2xl shadow-black/5 backdrop-blur-xl">
+      {/* Decorative glow */}
+      <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 left-1/3 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
+
+      <div className="relative grid gap-12 p-7 sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:p-14">
+        {/* Main CTA */}
+        <div className="flex flex-col justify-center">
+          <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-brand/15 bg-brand/5 px-3 py-1.5 text-sm font-medium text-brand">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            Let’s connect
+          </div>
+
+          <Typography
+            variant="h2"
+            as="h2"
+            className="max-w-xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
+          >
+            Have a question?
+            <br />
+            <span className="text-muted-foreground">
+              Start a conversation.
+            </span>
+          </Typography>
+
+          <Typography
+            variant="muted"
+            as="p"
+            className="mt-5 max-w-xl text-base leading-7 sm:text-lg"
+          >
+            Have a question about a role, the company, or the hiring process?
+            We’d love to hear from you.
+          </Typography>
+
+          <div className="mt-8">
+            <Button asChild size="lg" className="group shadow-lg shadow-primary/10">
+              <a href="mailto:careers@adbuthverse.com">
+                Send a Message
+                <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        {/* Contact details */}
+        <div className="space-y-3">
+          {/* Email */}
+          <a
+            href="mailto:careers@adbuthverse.com"
+            className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-background/60 p-5 transition-all duration-300 hover:border-brand/30 hover:bg-background hover:shadow-lg hover:shadow-brand/5"
+          >
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand">
+              <Mail className="h-5 w-5" />
+            </div>
+
+            <div className="min-w-0">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Email
+              </p>
+              <p className="mt-1 truncate text-sm font-medium text-foreground transition-colors group-hover:text-brand sm:text-base">
+                careers@adbuthverse.com
+              </p>
+            </div>
+
+            <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand" />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/company/adbuthverse"
+            target="_blank"
+            rel="noreferrer"
+            className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-background/60 p-5 transition-all duration-300 hover:border-brand/30 hover:bg-background hover:shadow-lg hover:shadow-brand/5"
+          >
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand">
+              <Linkedin className="h-5 w-5" />
+            </div>
+
+            <div className="min-w-0">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                LinkedIn
+              </p>
+              <p className="mt-1 truncate text-sm font-medium text-foreground transition-colors group-hover:text-brand sm:text-base">
+                AdbuthVerse
+              </p>
+            </div>
+
+            <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand" />
+          </a>
+
+          {/* Response note */}
+          <div className="flex items-start gap-3 px-1 pt-3 text-xs leading-5 text-muted-foreground">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+            We’ll get back to you as soon as we can.
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<section className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-32">
+  {/* Background atmosphere */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute left-1/2 top-1/2 h-[600px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/[0.08] blur-3xl" />
+    <div className="absolute left-1/4 top-0 h-[300px] w-[300px] rounded-full bg-indigo-500/[0.06] blur-3xl" />
+    <div className="absolute bottom-0 right-1/4 h-[300px] w-[300px] rounded-full bg-cyan-400/[0.06] blur-3xl" />
+  </div>
+
+  {/* Subtle grid */}
+  <div className="pointer-events-none absolute inset-0 opacity-[0.025] [background-image:linear-gradient(rgba(255,255,255,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.8)_1px,transparent_1px)] [background-size:48px_48px]" />
+
+  <Container className="relative px-6 lg:px-8">
+    <div className="mx-auto max-w-4xl text-center">
+      {/* Eyebrow */}
+      <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-3.5 py-1.5 text-sm font-medium text-brand">
+        <Sparkles className="h-4 w-4" />
+        Your next chapter starts here
+      </div>
+
+      {/* Heading */}
+      <Typography
+        variant="h2"
+        as="h2"
+        className="text-4xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:text-6xl"
+      >
+        Ready to build something{" "}
+        <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">
+          meaningful?
+        </span>
+      </Typography>
+
+      {/* Description */}
+      <Typography
+        variant="muted"
+        as="p"
+        className="mx-auto mt-6 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8"
+      >
+        Explore the current opportunities and take the next step toward your
+        future at AdbuthVerse.
+      </Typography>
+
+      {/* CTA */}
+      <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <Button
+          asChild
+          size="lg"
+          className="group min-w-[210px] shadow-xl shadow-primary/15"
+        >
+          <Link href="#open-positions">
+            Explore Open Positions
+            <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+          </Link>
+        </Button>
+      </div>
+
+      {/* Supporting line */}
+      <div className="mt-8 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+        Come build with us
+      </div>
+    </div>
+  </Container>
+</section>
+
     </main>
   );
 }
