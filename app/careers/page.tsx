@@ -948,7 +948,7 @@ export default async function CareersPage() {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/company/adbuthverse"
+            href="https://www.linkedin.com/company/jayasadbuthproductionsllp/"
             target="_blank"
             rel="noreferrer"
             className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-background/60 p-5 transition-all duration-300 hover:border-brand/30 hover:bg-background hover:shadow-lg hover:shadow-brand/5"
