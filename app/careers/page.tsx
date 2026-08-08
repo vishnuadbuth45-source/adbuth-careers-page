@@ -61,7 +61,7 @@ const benefits = [
 ];
 
 const faqs = [
-  { question: "Remote or Onsite?", answer: "We work with a hybrid spirit, balancing remote flexibility with focused in-person collaboration when it adds value." },
+  {question: "Remote or Onsite?", answer: "We work fully onsite, creating a collaborative environment where teams can connect, learn, and build together." },
   { question: "Internship?", answer: "We welcome interns and early-career builders who are curious, consistent, and hungry to learn." },
   { question: "Interview Duration?", answer: "Most interviews span one to two meetings, depending on the role and level." },
   { question: "Response Time?", answer: "We aim to respond within a few business days after each stage." },
@@ -217,7 +217,7 @@ export default async function CareersPage() {
 
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Remote-first",
+                  "Collaborative environment",
                   "High ownership",
                   "Continuous learning",
                 ].map((item) => (
