@@ -927,7 +927,7 @@ export default async function CareersPage() {
         <div className="space-y-3">
           {/* Email */}
           <a
-            href="mailto:careers@adbuthverse.com"
+            href="mailto:contact@adbuthverse.com"
             className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-background/60 p-5 transition-all duration-300 hover:border-brand/30 hover:bg-background hover:shadow-lg hover:shadow-brand/5"
           >
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand">
