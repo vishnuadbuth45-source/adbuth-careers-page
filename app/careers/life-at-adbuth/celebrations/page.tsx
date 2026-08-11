@@ -138,7 +138,7 @@ export default function CelebrationsPage() {
 
             <div>
               <p className="text-lg leading-8 text-muted-foreground">
-                Work is a big part of what brings us together, but it isn't the
+                Work is a big part of what brings us together, but it isn&apost the
                 whole story. We believe that celebrating the people around us
                 creates a stronger team and a better place to work.
               </p>
@@ -179,7 +179,7 @@ export default function CelebrationsPage() {
             </div>
 
             <p className="max-w-md text-sm leading-6 text-muted-foreground lg:text-right">
-              A birthday isn't just about another year. It's an opportunity
+              A birthday isn&apost just about another year. It&aposs an opportunity
               for the team to come together, share a few laughs, and make the
               day memorable.
             </p>
@@ -247,7 +247,7 @@ export default function CelebrationsPage() {
             </p>
 
             <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl">
-              Because it's the people
+              Because it&aposs the people
               <span className="text-muted-foreground"> that make it.</span>
             </h2>
           </div>
@@ -368,7 +368,7 @@ export default function CelebrationsPage() {
             </h2>
 
             <p className="mt-10 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">
-              The best teams aren't only connected by the work they do. They
+              The best teams aren&apost only connected by the work they do. They
               are connected by the moments they share along the way.
             </p>
           </div>
@@ -389,7 +389,7 @@ export default function CelebrationsPage() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-            Join a team where the work matters, the people matter, and there's
+            Join a team where the work matters, the people matter, and there&aposs
             always a reason to celebrate.
           </p>
 

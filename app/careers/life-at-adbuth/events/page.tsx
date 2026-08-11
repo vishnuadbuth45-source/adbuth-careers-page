@@ -157,7 +157,7 @@ export default function EventsPage() {
                 A conversation about
                 <br />
                 <span className="text-muted-foreground">
-                  what's next.
+                  what&aposs next.
                 </span>
               </h2>
             </div>
@@ -363,7 +363,7 @@ export default function EventsPage() {
               </p>
 
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                That mix was intentional. The future of creative work won't be
+                That mix was intentional. The future of creative work won&apost be
                 shaped by one industry alone. It will be shaped by the
                 conversations between them.
               </p>
@@ -455,11 +455,11 @@ export default function EventsPage() {
             <h2 className="mt-6 text-5xl font-bold leading-[0.92] tracking-[-0.05em] sm:text-7xl lg:text-8xl">
               THE FUTURE
               <br />
-              ISN'T JUST
+              ISN&aposT JUST
               <br />
               <span className="text-brand">WATCHED.</span>
               <br />
-              IT'S CREATED.
+              IT&aposS CREATED.
             </h2>
 
             <p className="mt-10 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">
@@ -477,18 +477,18 @@ export default function EventsPage() {
       <section className="py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
-            Be part of what's next
+            Be part of what&aposs next
           </p>
 
           <h2 className="mt-5 text-4xl font-bold tracking-[-0.03em] sm:text-6xl">
-            Don't just watch the future.
+            Don&apost just watch the future.
             <br />
             Create it.
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
             Join AdbuthVerse and work alongside people who are curious about
-            what's possible and passionate about making it real.
+            what&aposs possible and passionate about making it real.
           </p>
 
           <Link

@@ -109,8 +109,8 @@ export default function EmployeeStoriesPage() {
 
             <div>
               <p className="text-lg leading-8 text-muted-foreground">
-                At AdbuthVerse, we believe growth isn't only about job titles.
-                It's about the work you take ownership of, the people you learn
+                At AdbuthVerse, we believe growth isn&apost only about job titles.
+                It&aposs about the work you take ownership of, the people you learn
                 from, and the impact you create along the way.
               </p>
 

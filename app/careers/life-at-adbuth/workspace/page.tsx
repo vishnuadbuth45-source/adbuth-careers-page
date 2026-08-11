@@ -98,7 +98,7 @@ export default function WorkspacePage() {
 
             <div className="lg:pb-2 lg:pl-10">
               <p className="text-xl font-medium leading-8 tracking-tight sm:text-2xl">
-                More than a workspace. It's the environment where ideas become
+                More than a workspace. It&aposs the environment where ideas become
                 edits, edits become stories, and stories create impact.
               </p>
 
@@ -171,12 +171,12 @@ export default function WorkspacePage() {
             <div>
               <p className="text-lg leading-8 text-muted-foreground">
                 Video editing is a craft that demands focus, creativity,
-                precision, and collaboration. That's why we don't think of our
+                precision, and collaboration. That&aposs why we don&apost think of our
                 workspace as simply somewhere to sit and work.
               </p>
 
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                It's a place where editors can get deep into a timeline,
+                It&aposs a place where editors can get deep into a timeline,
                 creators can bounce ideas around, and teams can come together
                 to turn concepts into finished work.
               </p>
@@ -393,7 +393,7 @@ export default function WorkspacePage() {
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
             Bring your creativity, your curiosity, and your obsession with
-            great work. There's a place for you here.
+            great work. There&aposs a place for you here.
           </p>
 
           <Link
