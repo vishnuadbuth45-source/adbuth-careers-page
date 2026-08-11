@@ -9,22 +9,44 @@ import {
 
 import { Container } from "@/components/shared/container";
 import { Typography } from "@/components/shared/typography";
+import { ReelCarousel } from "@/components/shared/reel-carousel";
 
 const footerLinks = {
   company: [
-    { label: "About AdbuthVerse", href: "/careers#why-join" },
-    { label: "Contact", href: "/careers#contact" },
+    {
+      label: "About AdbuthVerse",
+      href: "/careers#why-join",
+    },
+    {
+      label: "Contact",
+      href: "/careers#contact",
+    },
   ],
 
   careers: [
-    { label: "Open Roles", href: "/careers#open-positions" },
-    { label: "Life at AdbuthVerse", href: "/careers#life-at" },
-    { label: "Benefits", href: "/careers#benefits" },
+    {
+      label: "Open Roles",
+      href: "/careers#open-positions",
+    },
+    {
+      label: "Life at AdbuthVerse",
+      href: "/careers#life-at",
+    },
+    {
+      label: "Benefits",
+      href: "/careers#benefits",
+    },
   ],
 
   legal: [
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms-of-service" },
+    {
+      label: "Privacy Policy",
+      href: "/privacy-policy",
+    },
+    {
+      label: "Terms of Service",
+      href: "/terms-of-service",
+    },
   ],
 
   social: [
@@ -56,8 +78,19 @@ function Footer() {
 
   return (
     <footer className="border-t border-border bg-background">
+
+      {/* =========================================================
+          REELS
+      ========================================================= */}
+      <ReelCarousel />
+
       <Container>
-        <div className="grid grid-cols-1 gap-10 py-12 sm:grid-cols-2 lg:grid-cols-5">
+
+        {/* =========================================================
+            MAIN FOOTER
+        ========================================================= */}
+        <div className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
+
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link
@@ -69,14 +102,14 @@ function Footer() {
 
             <Typography
               variant="body-sm"
-              className="mt-4 max-w-sm text-muted-foreground"
+              className="mt-4 max-w-sm leading-6 text-muted-foreground"
             >
-              Building the future of digital experiences. Join our team and
-              make an impact.
+              Building the future of digital experiences through creativity,
+              technology, and exceptional people.
             </Typography>
 
             {/* Social Links */}
-            <div className="mt-6">
+            <div className="mt-7">
               <Typography
                 variant="body-sm"
                 className="mb-4 font-semibold"
@@ -84,7 +117,7 @@ function Footer() {
                 Follow Us
               </Typography>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5">
                 {footerLinks.social.map((social) => {
                   const Icon = social.icon;
 
@@ -95,7 +128,7 @@ function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:border-foreground hover:bg-muted hover:text-foreground"
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground hover:bg-muted hover:text-foreground"
                     >
                       <Icon className="h-4 w-4" />
                     </a>
@@ -114,12 +147,12 @@ function Footer() {
               Company
             </Typography>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-body-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -137,12 +170,12 @@ function Footer() {
               Careers
             </Typography>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {footerLinks.careers.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-body-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -160,12 +193,12 @@ function Footer() {
               Legal
             </Typography>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-body-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -175,8 +208,10 @@ function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-border py-8 sm:flex-row">
+        {/* =========================================================
+            BOTTOM
+        ========================================================= */}
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-border py-7 sm:flex-row">
           <Typography variant="caption">
             &copy; {currentYear} AdbuthVerse. All rights reserved.
           </Typography>
@@ -185,6 +220,7 @@ function Footer() {
             Crafted with care for exceptional talent.
           </Typography>
         </div>
+
       </Container>
     </footer>
   );

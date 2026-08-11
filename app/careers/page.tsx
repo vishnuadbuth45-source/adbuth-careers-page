@@ -356,7 +356,7 @@ export default async function CareersPage() {
           More than a workplace.
           <br className="hidden sm:block" />{" "}
           <span className="text-muted-foreground">
-            It’s where we build together.
+            It&apos;s where we create magic together.
           </span>
         </Typography>
 
@@ -365,8 +365,8 @@ export default async function CareersPage() {
           as="p"
           className="max-w-xl text-base leading-7 sm:text-lg"
         >
-          A blend of thoughtful collaboration, inspiring moments, and
-          people-first energy.
+          A glimpse into the people, spaces, stories, and moments that make
+          life at AdbuthVerse unique.
         </Typography>
       </div>
 
@@ -377,79 +377,114 @@ export default async function CareersPage() {
     </div>
 
     {/* Life at cards */}
-    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-      {lifeAtItems.map((item, index) => {
-        const Icon = item.icon;
-
-        const images = [
-          image1,
-          image2,
-          image3,
-          image4,
-          image5,
-          image6,
-          image7,
-          image8,
-        ];
-
-        const image = images[index % images.length];
-
-        return (
-          <Link
-            key={item.title}
-            href={item.href}
-            className="group relative overflow-hidden rounded-2xl border border-border/60 bg-background/60 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-brand/30 hover:shadow-2xl hover:shadow-brand/10"
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: "Our Team",
+          description:
+            "A closer look at the creative minds, editors, and people building AdbuthVerse.",
+          href: "/careers/life-at-adbuth/team",
+          image:
+            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426149/TEAM.jpg",
+        },
+        {
+          title: "Our Workspace",
+          description:
+            "The environment where ideas take shape, teams collaborate, and creative work comes to life.",
+          href: "/careers/life-at-adbuth/workspace",
+          image:
+            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426151/WORKSPACE.jpg",
+        },
+        {
+          title: "Celebrations",
+          description:
+            "The birthdays, milestones, achievements, and moments we celebrate together.",
+          href: "/careers/life-at-adbuth/celebrations",
+          image:
+            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426145/CELEBRATIONS.jpg",
+        },
+        {
+          title: "Employee Stories",
+          description:
+            "Meet the people behind the work and discover the stories that shape our team.",
+          href: "/careers/life-at-adbuth/employee-stories",
+          image:
+            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426146/EMPLOYEE_STORIES.jpg",
+        },
+        {
+          title: "Events",
+          description:
+            "From creative conversations to industry gatherings, see what happens beyond the everyday.",
+          href: "/careers/life-at-adbuth/events",
+          image:
+            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426147/EVENT.jpg",
+        },
+      ].map((item, index) => (
+        <Link
+          key={item.title}
+          href={item.href}
+          className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-background/60 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-brand/30 hover:shadow-2xl hover:shadow-brand/10 ${
+            index === 0 ? "lg:col-span-2" : ""
+          }`}
+        >
+          {/* Image */}
+          <div
+            className={`relative overflow-hidden ${
+              index === 0
+                ? "aspect-[16/8]"
+                : "aspect-[16/10]"
+            }`}
           >
-            {/* Image */}
-            <div className="relative aspect-[16/10] overflow-hidden">
-              <Image
-  src={image}
-  alt={item.title}
-  fill
-  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-/>
+            <Image
+              src={item.image}
+              alt={item.title}
+              fill
+              sizes={
+                index === 0
+                  ? "(max-width: 1024px) 100vw, 66vw"
+                  : "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              }
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
 
-              {/* Image overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80" />
-              <div className="absolute inset-0 bg-brand/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            {/* Dark gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90" />
 
-              {/* Icon */}
-              <div className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-black/20 text-white backdrop-blur-md transition-all duration-300 group-hover:scale-105 group-hover:bg-brand/80">
-                <Icon className="h-5 w-5" />
-              </div>
+            {/* Hover tint */}
+            <div className="absolute inset-0 bg-brand/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-              {/* Number */}
-              <span className="absolute right-5 top-5 text-xs font-medium tabular-nums text-white/60">
-                {String(index + 1).padStart(2, "0")}
-              </span>
+            {/* Number */}
+            <span className="absolute right-5 top-5 text-xs font-medium tabular-nums text-white/60">
+              {String(index + 1).padStart(2, "0")}
+            </span>
 
-              {/* Title over image */}
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <h3 className="text-lg font-semibold tracking-tight text-white">
-                  {item.title}
-                </h3>
-              </div>
+            {/* Title */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
+              <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                {item.title}
+              </h3>
+            </div>
+          </div>
+
+          {/* Description */}
+          <div className="relative p-5 sm:p-6">
+            <p className="text-sm leading-6 text-muted-foreground">
+              {item.description}
+            </p>
+
+            {/* Explore */}
+            <div className="mt-5 flex items-center gap-2 text-sm font-medium text-brand">
+              Explore
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </div>
 
-            {/* Description */}
-            <div className="relative p-5">
-              <p className="text-sm leading-6 text-muted-foreground">
-                {item.description}
-              </p>
+            {/* Bottom accent */}
+            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-cyan-400 transition-all duration-500 group-hover:w-full" />
+          </div>
+        </Link>
+      ))}
 
-              {/* Explore indicator */}
-              <div className="mt-5 flex items-center gap-2 text-sm font-medium text-brand">
-                Explore
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </div>
-
-              {/* Bottom accent */}
-              <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-cyan-400 transition-all duration-500 group-hover:w-full" />
-            </div>
-          </Link>
-        );
-      })}
+      {/* Fifth card fills the remaining space nicely */}
     </div>
   </Container>
 </section>
