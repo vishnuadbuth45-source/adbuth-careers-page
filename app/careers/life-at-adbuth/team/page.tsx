@@ -16,17 +16,17 @@ export default function TeamPage() {
             {/* Left */}
             <div>
               <div className="mb-7 flex items-center gap-3">
-                <span className="h-px w-10 bg-brand" />
+  <span className="h-px w-10 bg-[#7d287e]" />
 
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
-                  Life at AdbuthVerse
-                </p>
-              </div>
+  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
+    Life at AdbuthVerse
+  </p>
+</div>
 
               <h1 className="max-w-5xl text-5xl font-bold leading-[0.95] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
                 WE CREATE
                 <br />
-                <span className="text-brand">VISUAL IMPACT.</span>
+                <span className="text-[#7d287e]">VISUAL IMPACT.</span>
               </h1>
 
               <p className="mt-8 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
@@ -35,13 +35,14 @@ export default function TeamPage() {
               </p>
 
               <div className="mt-9 flex flex-wrap gap-3">
-                <Link scroll={true}
-                  href="/careers#open-positions"
-                  className="inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand/90"
-                >
-                  Join the team
-                  <span className="ml-2">↗</span>
-                </Link>
+               <Link
+  scroll={true}
+  href="/careers#open-positions"
+  className="inline-flex items-center rounded-full bg-[#7d287e] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#6a216b]"
+>
+  Join the team
+  <span className="ml-2">↗</span>
+</Link>
 
                 <a
                   href="#our-team"
@@ -81,14 +82,14 @@ export default function TeamPage() {
           {/* Section heading */}
           <div className="mb-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
-                The people behind the work
-              </p>
+  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
+    The people behind the work
+  </p>
 
-              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-                One team. Many perspectives.
-              </h2>
-            </div>
+  <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+    One team. Many perspectives.
+  </h2>
+</div>
 
             <p className="max-w-md text-sm leading-6 text-muted-foreground sm:text-right">
               Different skills, different perspectives, one shared obsession:
@@ -185,9 +186,9 @@ export default function TeamPage() {
           <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             {/* Heading */}
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
-                What drives us
-              </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
+  What drives us
+</p>
 
               <h2 className="mt-4 text-4xl font-bold leading-tight tracking-[-0.03em] sm:text-5xl">
                 We don&apost just edit videos.
@@ -202,7 +203,7 @@ export default function TeamPage() {
             <div className="space-y-0">
               <div className="border-t border-border py-7">
                 <div className="flex gap-6">
-                  <span className="text-sm font-semibold text-brand">
+                  <span className="text-sm font-semibold text-[#7d287e]">
                     01
                   </span>
 
@@ -222,7 +223,7 @@ export default function TeamPage() {
 
               <div className="border-t border-border py-7">
                 <div className="flex gap-6">
-                  <span className="text-sm font-semibold text-brand">
+                  <span className="text-sm font-semibold text-[#7d287e]">
                     02
                   </span>
 
@@ -241,7 +242,7 @@ export default function TeamPage() {
 
               <div className="border-t border-border py-7">
                 <div className="flex gap-6">
-                  <span className="text-sm font-semibold text-brand">
+                  <span className="text-sm font-semibold text-[#7d287e]">
                     03
                   </span>
 
@@ -261,7 +262,7 @@ export default function TeamPage() {
 
               <div className="border-t border-border py-7">
                 <div className="flex gap-6">
-                  <span className="text-sm font-semibold text-brand">
+                  <span className="text-sm font-semibold text-[#7d287e]">
                     04
                   </span>
 
@@ -300,7 +301,7 @@ export default function TeamPage() {
               <br />
               EDIT.
               <br />
-              <span className="text-brand">IMPACT.</span>
+              <span className="text-[#7d287e]">IMPACT.</span>
             </h2>
 
             <p className="mt-10 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">
@@ -317,7 +318,7 @@ export default function TeamPage() {
       ========================================================= */}
       <section className="py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
             Your next frame could start here
           </p>
 
@@ -331,13 +332,13 @@ export default function TeamPage() {
           </p>
 
           <Link
-          scroll={true}
-            href="/careers#open-positions"
-            className="mt-9 inline-flex items-center rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand/90 hover:shadow-lg"
-          >
-            Explore Open Positions
-            <span className="ml-2">↗</span>
-          </Link>
+  scroll={true}
+  href="/careers#open-positions"
+  className="mt-9 inline-flex items-center rounded-full bg-[#7d287e] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#6a216b] hover:shadow-lg"
+>
+  Explore Open Positions
+  <span className="ml-2">↗</span>
+</Link>
         </div>
       </section>
     </main>

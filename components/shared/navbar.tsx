@@ -46,13 +46,19 @@ function Navbar() {
           </ul>
 
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" className="md:hidden" asChild>
-              <Link href="/careers#why-join">About</Link>
-            </Button>
-            <Button variant="brand" size="sm" asChild>
-              <Link href="/careers#open-positions">View Open Roles</Link>
-            </Button>
-          </div>
+  <Button variant="ghost" size="sm" className="md:hidden" asChild>
+    <Link href="/careers#why-join">About</Link>
+  </Button>
+
+  <Button
+    variant="brand"
+    size="sm"
+    className="bg-[#7d287e] hover:bg-[#6b226b]"
+    asChild
+  >
+    <Link href="/careers#open-positions">View Open Roles</Link>
+  </Button>
+</div>
         </nav>
       </Container>
     </header>

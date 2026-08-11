@@ -82,7 +82,7 @@ export default function WorkspacePage() {
               <div className="mb-7 flex items-center gap-3">
                 <span className="h-px w-10 bg-brand" />
 
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                   Life at AdbuthVerse
                 </p>
               </div>
@@ -90,7 +90,7 @@ export default function WorkspacePage() {
               <h1 className="max-w-5xl text-5xl font-bold leading-[0.95] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
                 WHERE
                 <br />
-                <span className="text-brand">CREATION</span>
+                <span className="text-[#7d287e]">CREATION</span>
                 <br />
                 HAPPENS.
               </h1>
@@ -158,7 +158,7 @@ export default function WorkspacePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                 More than a desk
               </p>
 
@@ -192,7 +192,7 @@ export default function WorkspacePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-[0.7fr_1.3fr]">
             <div className="border-b border-border py-14 lg:border-b-0 lg:border-r lg:py-20 lg:pr-16">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                 How we work
               </p>
 
@@ -215,7 +215,7 @@ export default function WorkspacePage() {
                   className="border-b border-border px-0 py-8 last:border-b-0 sm:py-10 lg:px-14"
                 >
                   <div className="flex gap-6">
-                    <span className="pt-1 text-sm font-semibold text-brand">
+                    <span className="pt-1 text-sm font-semibold text-[#7d287e]">
                       {feature.number}
                     </span>
 
@@ -243,7 +243,7 @@ export default function WorkspacePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                 The setup
               </p>
 
@@ -267,7 +267,7 @@ export default function WorkspacePage() {
                   key={tool}
                   className="bg-background p-7 transition-colors duration-300 hover:bg-surface"
                 >
-                  <span className="text-xs font-semibold text-brand">
+                  <span className="text-xs font-semibold text-[#7d287e]">
                     0{index + 1}
                   </span>
 
@@ -286,7 +286,7 @@ export default function WorkspacePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                 Inside AdbuthVerse
               </p>
 
@@ -367,7 +367,7 @@ export default function WorkspacePage() {
               <br />
               GOOD PEOPLE.
               <br />
-              <span className="text-brand">GREAT WORK.</span>
+              <span className="text-[#7d287e]">GREAT WORK.</span>
             </h2>
 
             <p className="mt-10 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">
@@ -383,7 +383,7 @@ export default function WorkspacePage() {
       ========================================================= */}
       <section className="py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
             Make this your workspace
           </p>
 
@@ -396,13 +396,14 @@ export default function WorkspacePage() {
             great work. There&aposs a place for you here.
           </p>
 
-          <Link scroll={true}
-            href="/careers#open-positions"
-            className="mt-9 inline-flex items-center rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand/90 hover:shadow-lg"
-          >
-            Explore Open Positions
-            <span className="ml-2">↗</span>
-          </Link>
+         <Link
+  scroll={true}
+  href="/careers#open-positions"
+  className="mt-9 inline-flex items-center rounded-full bg-[#7d287e] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#6a216b] hover:shadow-lg"
+>
+  Explore Open Positions
+  <span className="ml-2">↗</span>
+</Link>
         </div>
       </section>
     </main>

@@ -143,11 +143,15 @@ export function ApplicationForm({ jobId, onSuccess }: ApplicationFormProps) {
         <textarea rows={10} value={form.cover_letter} onChange={(event) => updateField("cover_letter", event.target.value)} className="w-full rounded-md border border-input bg-background px-3 py-2" />
       </label>
 
-      <div className="flex justify-end">
-        <Button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Submit Application"}
-        </Button>
-      </div>
+     <div className="flex justify-end">
+  <Button
+    type="submit"
+    disabled={isSubmitting}
+    className="bg-[#7d287e] hover:bg-[#6a216b]"
+  >
+    {isSubmitting ? "Submitting..." : "Submit Application"}
+  </Button>
+</div>
     </form>
   );
 }

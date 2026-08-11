@@ -110,14 +110,14 @@ export default function EventsPage() {
             <div className="mb-7 flex items-center gap-3">
               <span className="h-px w-10 bg-brand" />
 
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                 AdbuthVerse Presents
               </p>
             </div>
 
             <h1 className="text-6xl font-bold leading-[0.88] tracking-[-0.05em] sm:text-7xl lg:text-[9rem]">
               AI
-              <span className="text-brand"> CONX</span>
+              <span className="text-[#7d287e]"> CONX</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-xl font-medium leading-8 text-white/80 sm:text-2xl">
@@ -149,7 +149,7 @@ export default function EventsPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                 The idea
               </p>
 
@@ -239,7 +239,7 @@ export default function EventsPage() {
       <section className="py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mb-12 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
               The conversation
             </p>
 
@@ -259,7 +259,7 @@ export default function EventsPage() {
                 key={theme.number}
                 className="bg-background p-8 transition-colors duration-300 hover:bg-surface sm:p-10"
               >
-                <span className="text-sm font-semibold text-brand">
+                <span className="text-sm font-semibold text-[#7d287e]">
                   {theme.number}
                 </span>
 
@@ -282,7 +282,7 @@ export default function EventsPage() {
       <section className="border-y border-border bg-surface/30 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mb-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
               The room
             </p>
 
@@ -342,7 +342,7 @@ export default function EventsPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                 People & perspectives
               </p>
 
@@ -383,7 +383,7 @@ export default function EventsPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                 Inside AI ConX
               </p>
 
@@ -415,9 +415,9 @@ export default function EventsPage() {
 
               return (
                 <div
-                  key={image.src}
-                  className={`group relative overflow-hidden rounded-2xl border border-border bg-surface ${layoutClasses[index]}`}
-                >
+  key={image.src}
+  className={`group relative self-start overflow-hidden rounded-2xl border border-border bg-surface ${layoutClasses[index]}`}
+>
                   <div
                     className={`relative overflow-hidden ${
                       index === 4 || index === 5
@@ -457,7 +457,7 @@ export default function EventsPage() {
               <br />
               ISN&aposT JUST
               <br />
-              <span className="text-brand">WATCHED.</span>
+              <span className="text-[#7d287e]">WATCHED.</span>
               <br />
               IT&aposS CREATED.
             </h2>
@@ -476,7 +476,7 @@ export default function EventsPage() {
       ========================================================= */}
       <section className="py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
             Be part of what&aposs next
           </p>
 
@@ -490,14 +490,14 @@ export default function EventsPage() {
             Join AdbuthVerse and work alongside people who are curious about
             what&aposs possible and passionate about making it real.
           </p>
-
-          <Link scroll={true}
-            href="/careers#open-positions"
-            className="mt-9 inline-flex items-center rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand/90 hover:shadow-lg"
-          >
-            Explore Open Positions
-            <span className="ml-2">↗</span>
-          </Link>
+<Link
+  scroll={true}
+  href="/careers#open-positions"
+  className="mt-9 inline-flex items-center rounded-full bg-[#7d287e] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#6a216b] hover:shadow-lg"
+>
+  Explore Open Positions
+  <span className="ml-2">↗</span>
+</Link>
         </div>
       </section>
     </main>

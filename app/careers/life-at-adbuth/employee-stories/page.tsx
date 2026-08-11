@@ -72,7 +72,7 @@ export default function EmployeeStoriesPage() {
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="mb-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+            <div className="mb-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
               <span className="h-px w-8 bg-brand" />
               Life at AdbuthVerse
             </div>
@@ -98,7 +98,7 @@ export default function EmployeeStoriesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                 Employee Stories
               </p>
 
@@ -185,7 +185,7 @@ export default function EmployeeStoriesPage() {
                   {/* Story */}
                   <div>
                     <div className="flex items-center gap-3">
-                      <span className="text-sm font-semibold tabular-nums text-brand">
+                      <span className="text-sm font-semibold tabular-nums text-[#7d287e]">
                         {String(index + 1).padStart(2, "0")}
                       </span>
 
@@ -231,7 +231,7 @@ export default function EmployeeStoriesPage() {
       ========================================================= */}
       <section className="border-y border-border bg-black py-24 text-white sm:py-32">
         <div className="mx-auto max-w-5xl px-6 text-center lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
             What growth looks like here
           </p>
 
@@ -240,7 +240,7 @@ export default function EmployeeStoriesPage() {
             <br />
             Learn every day.
             <br />
-            <span className="text-brand">Grow together.</span>
+            <span className="text-[#7d287e]">Grow together.</span>
           </h2>
 
           <p className="mx-auto mt-8 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">
@@ -256,7 +256,7 @@ export default function EmployeeStoriesPage() {
       ========================================================= */}
       <section className="py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
             Your story could be next
           </p>
 
@@ -269,13 +269,14 @@ export default function EmployeeStoriesPage() {
             room for people who want to learn, contribute, and make an impact.
           </p>
 
-          <Link scroll={true}
-            href="/careers#open-positions"
-            className="mt-8 inline-flex items-center rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand/90 hover:shadow-lg"
-          >
-            Explore Open Positions
-            <span className="ml-2">↗</span>
-          </Link>
+         <Link
+  scroll={true}
+  href="/careers#open-positions"
+  className="mt-9 inline-flex items-center rounded-full bg-[#7d287e] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#6a216b] hover:shadow-lg"
+>
+  Explore Open Positions
+  <span className="ml-2">↗</span>
+</Link>
         </div>
       </section>
     </main>

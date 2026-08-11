@@ -92,9 +92,9 @@ export default async function CareersPage() {
 <section className="relative isolate overflow-hidden border-b border-border/60">
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-3xl" />
-    <div className="absolute -bottom-40 right-0 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-3xl" />
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.10),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_40%)]" />
+    <div className="absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full bg-[#7d287e]/10 blur-3xl" />
+    <div className="absolute -bottom-40 right-0 h-[500px] w-[500px] rounded-full bg-[#7d287e]/10 blur-3xl" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(125,40,126,0.10),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(125,40,126,0.08),transparent_40%)]" />
   </div>
 
   <Container className="relative grid gap-14 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-20 lg:px-8 lg:py-28">
@@ -102,7 +102,7 @@ export default async function CareersPage() {
     <div className="max-w-3xl">
       <div className="space-y-8">
         {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/5 px-3.5 py-1.5 text-sm font-medium text-blue-600 dark:text-blue-400">
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#7d287e]/20 bg-[#7d287e]/5 px-3.5 py-1.5 text-sm font-medium text-[#7d287e] dark:text-[#c56ac6]">
           <Sparkles className="h-4 w-4" />
           Building the future of digital experiences
         </div>
@@ -115,7 +115,7 @@ export default async function CareersPage() {
             className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:text-6xl xl:text-[4.25rem]"
           >
             Join a company that turns bold ideas into{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#7d287e] via-[#9d3fa0] to-[#c56ac6] bg-clip-text text-transparent">
               meaningful products.
             </span>
           </Typography>
@@ -132,7 +132,11 @@ export default async function CareersPage() {
 
         {/* Actions */}
         <div className="flex flex-wrap items-center gap-3 pt-1">
-          <Button asChild size="lg" className="group shadow-lg shadow-primary/10">
+          <Button
+            asChild
+            size="lg"
+            className="group bg-[#7d287e] shadow-lg shadow-[#7d287e]/10 hover:bg-[#6b226b]"
+          >
             <Link scroll={true} href="#open-positions">
               Explore Opportunities
               <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -140,7 +144,9 @@ export default async function CareersPage() {
           </Button>
 
           <Button asChild variant="outline" size="lg" className="bg-background/60">
-            <Link scroll={true} href="#why-join">Discover the culture</Link>
+            <Link scroll={true} href="#why-join">
+              Discover the culture
+            </Link>
           </Button>
         </div>
 
@@ -152,7 +158,7 @@ export default async function CareersPage() {
           </span>
 
           <span className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#7d287e]" />
             Meaningful ownership
           </span>
 
@@ -167,14 +173,14 @@ export default async function CareersPage() {
     {/* Right — Visual panel */}
     <div className="relative">
       {/* Glow behind card */}
-      <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-blue-500/10 via-indigo-500/5 to-cyan-400/10 blur-2xl" />
+      <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#7d287e]/15 via-[#7d287e]/5 to-[#c56ac6]/10 blur-2xl" />
 
       <div className="relative overflow-hidden rounded-[2rem] border border-border/60 bg-background/70 p-2 shadow-2xl shadow-black/10 backdrop-blur-xl">
         {/* Inner card */}
-        <div className="relative min-h-[390px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-7 text-white sm:p-9">
+        <div className="relative min-h-[390px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-[#1f1f23] via-[#2b2b31] to-[#383840] p-7 text-white sm:p-9">
           {/* Decorative gradients */}
-          <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-cyan-400/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/6 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-slate-400/8 blur-3xl" />
 
           {/* Subtle grid */}
           <div className="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.5)_1px,transparent_1px)] [background-size:32px_32px]" />
@@ -184,13 +190,13 @@ export default async function CareersPage() {
             <div className="space-y-7">
               <div className="flex items-center justify-between">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.07] px-3 py-1.5 text-xs font-medium text-slate-200 backdrop-blur">
-                  <Brain className="h-3.5 w-3.5 text-blue-300" />
+                  <Brain className="h-3.5 w-3.5 text-slate-300" />
                   World-class craft
                 </div>
 
                 <div className="flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                  <span className="text-xs text-slate-400">Building</span>
+                  <span className="text-xs text-slate-300">Building</span>
                 </div>
               </div>
 
@@ -201,10 +207,10 @@ export default async function CareersPage() {
                   className="text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl"
                 >
                   Work with builders who care about{" "}
-                  <span className="text-blue-300">what they create.</span>
+                  <span className="text-slate-200">what they create.</span>
                 </Typography>
 
-                <p className="max-w-sm text-sm leading-6 text-slate-400">
+                <p className="max-w-sm text-sm leading-6 text-slate-300">
                   Bring your ideas, challenge assumptions, and help turn
                   ambitious thinking into products people genuinely value.
                 </p>
@@ -223,7 +229,7 @@ export default async function CareersPage() {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-slate-300 backdrop-blur"
+                    className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-slate-200 backdrop-blur"
                   >
                     {item}
                   </span>
@@ -236,25 +242,24 @@ export default async function CareersPage() {
     </div>
   </Container>
 </section>
-
 <section
   id="why-join"
   className="relative isolate overflow-hidden border-b border-border/60 bg-surface/40 py-24 lg:py-28"
 >
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute left-1/4 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-blue-500/[0.06] blur-3xl" />
-    <div className="absolute bottom-0 right-0 h-[350px] w-[450px] rounded-full bg-cyan-400/[0.05] blur-3xl" />
+    <div className="absolute left-1/4 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-[#7d287e]/[0.06] blur-3xl" />
+    <div className="absolute bottom-0 right-0 h-[350px] w-[450px] rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
   </div>
 
   <Container className="relative space-y-14 px-6 lg:px-8">
     {/* Section heading */}
     <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
       <div className="max-w-2xl space-y-4">
-        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
-          <span className="h-px w-6 bg-brand" />
-          Why AdbuthVerse
-        </div>
+        <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
+  <span className="h-px w-6 bg-[#7d287e]" />
+  Why AdbuthVerse
+</div>
 
         <Typography
           variant="h2"
@@ -289,40 +294,40 @@ export default async function CareersPage() {
         const Icon = item.icon;
 
         return (
-          <Card
-            key={item.title}
-            className="group relative overflow-hidden border-border/60 bg-background/60 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:bg-background/80 hover:shadow-xl hover:shadow-brand/5"
-          >
-            {/* Hover glow */}
-            <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-brand/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+<Card
+  key={item.title}
+  className="group relative overflow-hidden border-border/60 bg-background/60 transition-all duration-300 hover:-translate-y-1 hover:!border-[#7d287e]/30 hover:bg-background/80 hover:!shadow-xl hover:!shadow-[#7d287e]/5"
+>
+  {/* Hover glow */}
+  <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-[#7d287e]/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
-            <CardHeader className="relative pb-4">
-              <div className="flex items-start justify-between">
-                {/* Icon */}
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand transition-all duration-300 group-hover:border-brand/25 group-hover:bg-brand/15 group-hover:scale-105">
-                  <Icon className="h-5 w-5" />
-                </div>
+  <CardHeader className="relative pb-4">
+    <div className="flex items-start justify-between">
+      {/* Icon */}
+      <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#7d287e]/15 bg-[#7d287e]/10 text-[#7d287e] transition-all duration-300 group-hover:border-[#7d287e]/25 group-hover:bg-[#7d287e]/15 group-hover:scale-105">
+        <Icon className="h-5 w-5 text-[#7d287e]" />
+      </div>
 
-                {/* Number */}
-                <span className="text-xs font-medium tabular-nums text-muted-foreground/40">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-              </div>
+      {/* Number */}
+      <span className="text-xs font-medium tabular-nums text-muted-foreground/40">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+    </div>
 
-              <CardTitle className="pt-3 text-lg font-semibold tracking-tight">
-                {item.title}
-              </CardTitle>
-            </CardHeader>
+    <CardTitle className="pt-3 text-lg font-semibold tracking-tight">
+      {item.title}
+    </CardTitle>
+  </CardHeader>
 
-            <CardContent className="relative">
-              <p className="text-sm leading-6 text-muted-foreground">
-                {item.description}
-              </p>
-            </CardContent>
+  <CardContent className="relative">
+    <p className="text-sm leading-6 text-muted-foreground">
+      {item.description}
+    </p>
+  </CardContent>
 
-            {/* Bottom accent */}
-            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-cyan-400 transition-all duration-500 group-hover:w-full" />
-          </Card>
+  {/* Bottom accent */}
+  <div className="absolute bottom-0 left-0 h-px w-0 bg-[#7d287e] transition-all duration-500 group-hover:w-full" />
+</Card>
         );
       })}
     </div>
@@ -335,18 +340,18 @@ export default async function CareersPage() {
 >
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute -left-40 top-20 h-[450px] w-[450px] rounded-full bg-blue-500/[0.06] blur-3xl" />
-    <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-cyan-400/[0.05] blur-3xl" />
+    <div className="absolute -left-40 top-20 h-[450px] w-[450px] rounded-full bg-[#7d287e]/[0.06] blur-3xl" />
+    <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
   </div>
 
   <Container className="relative space-y-14 px-6 lg:px-8">
     {/* Section heading */}
     <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
       <div className="max-w-2xl space-y-4">
-        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
-          <span className="h-px w-6 bg-brand" />
-          Life at AdbuthVerse
-        </div>
+       <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
+  <span className="h-px w-6 bg-[#7d287e]" />
+  Life at AdbuthVerse
+</div>
 
         <Typography
           variant="h2"
@@ -473,13 +478,13 @@ export default async function CareersPage() {
             </p>
 
             {/* Explore */}
-            <div className="mt-5 flex items-center gap-2 text-sm font-medium text-brand">
-              Explore
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </div>
+            <div className="mt-5 flex items-center gap-2 text-sm font-medium text-[#7d287e]">
+  Explore
+  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+</div>
 
             {/* Bottom accent */}
-            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-cyan-400 transition-all duration-500 group-hover:w-full" />
+            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-[#7d287e] transition-all duration-500 group-hover:w-full" />
           </div>
         </Link>
       ))}
@@ -489,25 +494,24 @@ export default async function CareersPage() {
   </Container>
 </section>
 
-
 <section
   id="benefits"
   className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
 >
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute left-0 top-0 h-[400px] w-[500px] rounded-full bg-indigo-500/[0.05] blur-3xl" />
-    <div className="absolute bottom-0 right-0 h-[400px] w-[500px] rounded-full bg-blue-500/[0.06] blur-3xl" />
+    <div className="absolute left-0 top-0 h-[400px] w-[500px] rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
+    <div className="absolute bottom-0 right-0 h-[400px] w-[500px] rounded-full bg-[#7d287e]/[0.06] blur-3xl" />
   </div>
 
   <Container className="relative space-y-14 px-6 lg:px-8">
     {/* Section heading */}
     <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
       <div className="max-w-2xl space-y-4">
-        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
-          <span className="h-px w-6 bg-brand" />
-          Benefits & Perks
-        </div>
+       <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
+  <span className="h-px w-6 bg-[#7d287e]" />
+  Benefits & Perks
+</div>
 
         <Typography
           variant="h2"
@@ -553,7 +557,7 @@ export default async function CareersPage() {
             <CardHeader className="relative">
               <div className="flex items-start justify-between">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand transition-all duration-300 group-hover:scale-105 group-hover:border-brand/25 group-hover:bg-brand/15">
-                  <Icon className="h-5 w-5" />
+                <Icon className="h-5 w-5 text-[#7d287e]" />
                 </div>
 
                 <span className="text-xs font-medium tabular-nums text-muted-foreground/40">
@@ -573,7 +577,7 @@ export default async function CareersPage() {
             </CardContent>
 
             {/* Bottom hover accent */}
-            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-cyan-400 transition-all duration-500 group-hover:w-full" />
+            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-[#7d287e] transition-all duration-500 group-hover:w-full" />
           </Card>
         );
       })}
@@ -589,18 +593,18 @@ export default async function CareersPage() {
 >
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute left-0 top-20 h-[450px] w-[500px] rounded-full bg-blue-500/[0.05] blur-3xl" />
-    <div className="absolute bottom-0 right-0 h-[450px] w-[500px] rounded-full bg-cyan-400/[0.05] blur-3xl" />
+    <div className="absolute left-0 top-20 h-[450px] w-[500px] rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
+    <div className="absolute bottom-0 right-0 h-[450px] w-[500px] rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
   </div>
 
   <Container className="relative space-y-14 px-6 lg:px-8">
     {/* Section heading */}
     <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
       <div className="max-w-2xl space-y-4">
-        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
-          <span className="h-px w-6 bg-brand" />
-          Careers
-        </div>
+        <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
+  <span className="h-px w-6 bg-[#7d287e]" />
+  Careers
+</div>
 
         <Typography
           variant="h2"
@@ -633,102 +637,102 @@ export default async function CareersPage() {
     {jobs.length ? (
       <div className="grid gap-4 lg:grid-cols-2">
         {jobs.map((job) => (
-          <Link
-            key={job.id}
-            href={`/careers/${job.slug}`}
-            className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-background/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:bg-background/80 hover:shadow-2xl hover:shadow-brand/5 sm:p-7"
-          >
-            {/* Hover glow */}
-            <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-brand/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+         <Link
+  key={job.id}
+  href={`/careers/${job.slug}`}
+  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-background/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#7d287e]/30 hover:bg-background/80 hover:shadow-2xl hover:shadow-[#7d287e]/5 sm:p-7"
+>
+  {/* Hover glow */}
+  <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-[#7d287e]/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
-            {/* Top row */}
-            <div className="relative flex items-start justify-between gap-6">
-              <div className="min-w-0">
-                <h3 className="text-xl font-semibold leading-tight tracking-tight text-foreground transition-colors group-hover:text-brand sm:text-2xl">
-                  {job.title}
-                </h3>
+  {/* Top row */}
+  <div className="relative flex items-start justify-between gap-6">
+    <div className="min-w-0">
+      <h3 className="text-xl font-semibold leading-tight tracking-tight text-foreground transition-colors group-hover:text-[#7d287e] sm:text-2xl">
+        {job.title}
+      </h3>
 
-                {job.department && (
-                  <p className="mt-2 text-sm font-medium text-brand/90">
-                    {job.department}
-                  </p>
-                )}
-              </div>
+      {job.department && (
+        <p className="mt-2 text-sm font-medium text-[#7d287e]/90">
+          {job.department}
+        </p>
+      )}
+    </div>
 
-              {job.created_at && (
-                <time
-                  dateTime={job.created_at}
-                  className="shrink-0 whitespace-nowrap text-xs font-medium text-muted-foreground/70"
-                >
-                  Posted{" "}on{" "}
-                  {new Date(job.created_at).toLocaleDateString("en-US", {
-                    month: "short",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </time>
-              )}
-            </div>
+    {job.created_at && (
+      <time
+        dateTime={job.created_at}
+        className="shrink-0 whitespace-nowrap text-xs font-medium text-muted-foreground/70"
+      >
+        Posted on{" "}
+        {new Date(job.created_at).toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        })}
+      </time>
+    )}
+  </div>
 
-            {/* Metadata */}
-            <div className="relative mt-5 flex flex-wrap gap-2">
-              {[
-                job.location,
-                job.employment_type,
-                job.experience,
-              ]
-                .filter(Boolean)
-                .map((meta) => (
-                  <span
-                    key={meta}
-                    className="rounded-full border border-border/70 bg-muted/40 px-3 py-1 text-xs font-medium text-muted-foreground"
-                  >
-                    {meta}
-                  </span>
-                ))}
-            </div>
+  {/* Metadata */}
+  <div className="relative mt-5 flex flex-wrap gap-2">
+    {[
+      job.location,
+      job.employment_type,
+      job.experience,
+    ]
+      .filter(Boolean)
+      .map((meta) => (
+        <span
+          key={meta}
+          className="rounded-full border border-border/70 bg-muted/40 px-3 py-1 text-xs font-medium text-muted-foreground"
+        >
+          {meta}
+        </span>
+      ))}
+  </div>
 
-            {/* Description */}
-            <p className="relative mt-5 line-clamp-3 text-sm leading-6 text-muted-foreground">
-              {job.short_description}
-            </p>
+  {/* Description */}
+  <p className="relative mt-5 line-clamp-3 text-sm leading-6 text-muted-foreground">
+    {job.short_description}
+  </p>
 
-            {/* Footer */}
-            <div className="relative mt-auto pt-7">
-              <div className="flex items-center justify-between border-t border-border/60 pt-5">
-                <span className="text-sm font-semibold text-foreground transition-colors group-hover:text-brand">
-                  View Details
-                </span>
+  {/* Footer */}
+  <div className="relative mt-auto pt-7">
+    <div className="flex items-center justify-between border-t border-border/60 pt-5">
+      <span className="text-sm font-semibold text-foreground transition-colors group-hover:text-[#7d287e]">
+        View Details
+      </span>
 
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-border/70 bg-background transition-all duration-300 group-hover:border-brand/30 group-hover:bg-brand/10">
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-              </div>
-            </div>
+      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-border/70 bg-background transition-all duration-300 group-hover:border-[#7d287e]/30 group-hover:bg-[#7d287e]/10">
+        <ArrowRight className="h-4 w-4 text-[#7d287e] transition-transform duration-300 group-hover:translate-x-1" />
+      </span>
+    </div>
+  </div>
 
-            {/* Bottom hover accent */}
-            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand via-blue-500 to-cyan-400 transition-all duration-500 group-hover:w-full" />
-          </Link>
+  {/* Bottom hover accent */}
+  <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-[#7d287e] via-[#7d287e] to-[#7d287e] transition-all duration-500 group-hover:w-full" />
+</Link>
         ))}
       </div>
     ) : (
       /* Empty state */
       <div className="relative overflow-hidden rounded-2xl border border-dashed border-border/70 bg-background/40 px-6 py-16 text-center sm:px-10">
-        <div className="mx-auto flex max-w-md flex-col items-center">
-          <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand">
-            <Briefcase className="h-5 w-5" />
-          </div>
+  <div className="mx-auto flex max-w-md flex-col items-center">
+    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#7d287e]/10 text-[#7d287e]">
+      <Briefcase className="h-5 w-5" />
+    </div>
 
-          <h3 className="text-lg font-semibold">
-            No open positions right now
-          </h3>
+    <h3 className="text-lg font-semibold">
+      No open positions right now
+    </h3>
 
-          <p className="mt-2 text-sm leading-6 text-muted-foreground">
-            We don&apost have any open roles at the moment, but we&aposre always
-            interested in meeting talented people.
-          </p>
-        </div>
-      </div>
+    <p className="mt-2 text-sm leading-6 text-muted-foreground">
+      We don&apost have any open roles at the moment, but we&aposre always
+      interested in meeting talented people.
+    </p>
+  </div>
+</div>
     )}
   </Container>
 </section>
@@ -740,17 +744,17 @@ export default async function CareersPage() {
 >
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute left-1/3 top-0 h-[400px] w-[500px] rounded-full bg-violet-500/[0.05] blur-3xl" />
-    <div className="absolute bottom-0 right-0 h-[400px] w-[500px] rounded-full bg-blue-500/[0.05] blur-3xl" />
+    <div className="absolute left-1/3 top-0 h-[400px] w-[500px] rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
+    <div className="absolute bottom-0 right-0 h-[400px] w-[500px] rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
   </div>
 
   <Container className="relative space-y-14 px-6 lg:px-8">
     {/* Section heading */}
     <div className="max-w-2xl space-y-4">
-      <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
-        <span className="h-px w-6 bg-brand" />
-        How it works
-      </div>
+      <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
+  <span className="h-px w-6 bg-[#7d287e]" />
+  How it works
+</div>
 
       <Typography
         variant="h2"
@@ -784,29 +788,29 @@ export default async function CareersPage() {
           ["5", "Final Discussion", "Alignment on growth, expectations, and impact."],
           ["6", "Offer & Onboarding", "A thoughtful welcome into the team."],
         ].map(([step, title, description]) => (
-          <div
-            key={title}
-            className="group relative flex gap-5 rounded-2xl border border-border/60 bg-background/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:bg-background/80 hover:shadow-xl hover:shadow-brand/5"
-          >
-            {/* Step number */}
-            <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand/20 bg-brand/10 text-sm font-semibold text-brand transition-all duration-300 group-hover:border-brand/40 group-hover:bg-brand/15 group-hover:scale-105">
-              {step}
-            </div>
+       <div
+  key={title}
+  className="group relative flex gap-5 rounded-2xl border border-border/60 bg-background/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#7d287e]/30 hover:bg-background/80 hover:shadow-xl hover:shadow-[#7d287e]/5"
+>
+  {/* Step number */}
+  <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#7d287e]/20 bg-[#7d287e]/10 text-sm font-semibold text-[#7d287e] transition-all duration-300 group-hover:border-[#7d287e]/40 group-hover:bg-[#7d287e]/15 group-hover:scale-105">
+    {step}
+  </div>
 
-            {/* Content */}
-            <div className="min-w-0 pt-0.5">
-              <h3 className="font-semibold tracking-tight text-foreground">
-                {title}
-              </h3>
+  {/* Content */}
+  <div className="min-w-0 pt-0.5">
+    <h3 className="font-semibold tracking-tight text-foreground">
+      {title}
+    </h3>
 
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                {description}
-              </p>
-            </div>
+    <p className="mt-2 text-sm leading-6 text-muted-foreground">
+      {description}
+    </p>
+  </div>
 
-            {/* Hover accent */}
-            <div className="absolute bottom-0 left-5 right-5 h-px scale-x-0 bg-gradient-to-r from-brand to-cyan-400 transition-transform duration-500 group-hover:scale-x-100" />
-          </div>
+  {/* Hover accent */}
+  <div className="absolute bottom-0 left-5 right-5 h-px scale-x-0 bg-gradient-to-r from-[#7d287e] to-[#7d287e] transition-transform duration-500 group-hover:scale-x-100" />
+</div>
         ))}
       </div>
     </div>
@@ -836,19 +840,18 @@ export default async function CareersPage() {
 >
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-blue-500/[0.05] blur-3xl" />
-    <div className="absolute bottom-0 left-0 h-[350px] w-[350px] rounded-full bg-cyan-400/[0.04] blur-3xl" />
+    <div className="absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
+    <div className="absolute bottom-0 left-0 h-[350px] w-[350px] rounded-full bg-[#7d287e]/[0.04] blur-3xl" />
   </div>
 
   <Container className="relative px-6 lg:px-8">
     <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
       {/* Heading */}
       <div className="max-w-md space-y-5 lg:sticky lg:top-24 lg:self-start">
-        <div className="inline-flex items-center gap-2 text-sm font-medium text-brand">
-          <span className="h-px w-6 bg-brand" />
-          FAQ
-        </div>
-
+        <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
+  <span className="h-px w-6 bg-[#7d287e]" />
+  FAQ
+</div>
         <Typography
           variant="h2"
           as="h2"
@@ -903,29 +906,30 @@ export default async function CareersPage() {
   </Container>
 </section>
 
+
 <section
   id="contact"
   className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
 >
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute left-1/4 top-1/2 h-[500px] w-[700px] -translate-y-1/2 rounded-full bg-blue-500/[0.07] blur-3xl" />
-    <div className="absolute right-0 top-0 h-[350px] w-[350px] rounded-full bg-cyan-400/[0.06] blur-3xl" />
+    <div className="absolute left-1/4 top-1/2 h-[500px] w-[700px] -translate-y-1/2 rounded-full bg-[#7d287e]/[0.07] blur-3xl" />
+    <div className="absolute right-0 top-0 h-[350px] w-[350px] rounded-full bg-[#7d287e]/[0.06] blur-3xl" />
   </div>
 
   <Container className="relative px-6 lg:px-8">
     <div className="relative overflow-hidden rounded-[2rem] border border-border/60 bg-background/70 shadow-2xl shadow-black/5 backdrop-blur-xl">
       {/* Decorative glow */}
-      <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 left-1/3 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[#7d287e]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 left-1/3 h-80 w-80 rounded-full bg-[#7d287e]/10 blur-3xl" />
 
       <div className="relative grid gap-12 p-7 sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:p-14">
         {/* Main CTA */}
         <div className="flex flex-col justify-center">
-          <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-brand/15 bg-brand/5 px-3 py-1.5 text-sm font-medium text-brand">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            Let’s connect
-          </div>
+         <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[#7d287e]/15 bg-[#7d287e]/5 px-3 py-1.5 text-sm font-medium text-[#7d287e]">
+  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+  Let’s connect
+</div>
 
           <Typography
             variant="h2"
@@ -948,68 +952,72 @@ export default async function CareersPage() {
             We’d love to hear from you.
           </Typography>
 
-          <div className="mt-8">
-            <Button asChild size="lg" className="group shadow-lg shadow-primary/10">
-              <a href="mailto:careers@adbuthverse.com">
-                Send a Message
-                <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-              </a>
-            </Button>
-          </div>
+         <div className="mt-8">
+  <Button
+    asChild
+    size="lg"
+    className="group bg-[#7d287e] text-white shadow-lg shadow-[#7d287e]/20 hover:bg-[#6b216b]"
+  >
+    <a href="mailto:careers@adbuthverse.com">
+      Send a Message
+      <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+    </a>
+  </Button>
+</div>
         </div>
 
         {/* Contact details */}
-        <div className="space-y-3">
-          {/* Email */}
-          <a
-            href="mailto:contact@adbuthverse.com"
-            className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-background/60 p-5 transition-all duration-300 hover:border-brand/30 hover:bg-background hover:shadow-lg hover:shadow-brand/5"
-          >
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand">
-              <Mail className="h-5 w-5" />
-            </div>
+<div className="space-y-3">
+  {/* Email */}
+  <a
+    href="mailto:contact@adbuthverse.com"
+    className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-background/60 p-5 transition-all duration-300 hover:border-[#7d287e]/30 hover:bg-background hover:shadow-lg hover:shadow-[#7d287e]/5"
+  >
+    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#7d287e]/15 bg-[#7d287e]/10 text-[#7d287e]">
+      <Mail className="h-5 w-5" />
+    </div>
 
-            <div className="min-w-0">
-              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                Email
-              </p>
-              <p className="mt-1 truncate text-sm font-medium text-foreground transition-colors group-hover:text-brand sm:text-base">
-                careers@adbuthverse.com
-              </p>
-            </div>
+    <div className="min-w-0">
+      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+        Email
+      </p>
+      <p className="mt-1 truncate text-sm font-medium text-foreground transition-colors group-hover:text-[#7d287e] sm:text-base">
+        careers@adbuthverse.com
+      </p>
+    </div>
 
-            <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand" />
-          </a>
+    <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#7d287e]" />
+  </a>
 
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/company/jayasadbuthproductionsllp/"
-            target="_blank"
-            rel="noreferrer"
-            className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-background/60 p-5 transition-all duration-300 hover:border-brand/30 hover:bg-background hover:shadow-lg hover:shadow-brand/5"
-          >
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand">
-              <Linkedin className="h-5 w-5" />
-            </div>
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/company/jayasadbuthproductionsllp/"
+    target="_blank"
+    rel="noreferrer"
+    className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-background/60 p-5 transition-all duration-300 hover:border-[#7d287e]/30 hover:bg-background hover:shadow-lg hover:shadow-[#7d287e]/5"
+  >
+    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#7d287e]/15 bg-[#7d287e]/10 text-[#7d287e]">
+      <Linkedin className="h-5 w-5" />
+    </div>
 
-            <div className="min-w-0">
-              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                LinkedIn
-              </p>
-              <p className="mt-1 truncate text-sm font-medium text-foreground transition-colors group-hover:text-brand sm:text-base">
-                AdbuthVerse
-              </p>
-            </div>
+    <div className="min-w-0">
+      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+        LinkedIn
+      </p>
+      <p className="mt-1 truncate text-sm font-medium text-foreground transition-colors group-hover:text-[#7d287e] sm:text-base">
+        AdbuthVerse
+      </p>
+    </div>
 
-            <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand" />
-          </a>
+    <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#7d287e]" />
+  </a>
 
-          {/* Response note */}
-          <div className="flex items-start gap-3 px-1 pt-3 text-xs leading-5 text-muted-foreground">
-            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
-            We’ll get back to you as soon as we can.
-          </div>
-        </div>
+  {/* Response note */}
+  <div className="flex items-start gap-3 px-1 pt-3 text-xs leading-5 text-muted-foreground">
+    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+    We’ll get back to you as soon as we can.
+  </div>
+</div>
       </div>
     </div>
   </Container>
@@ -1018,9 +1026,9 @@ export default async function CareersPage() {
 <section className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-32">
   {/* Background atmosphere */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute left-1/2 top-1/2 h-[600px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/[0.08] blur-3xl" />
-    <div className="absolute left-1/4 top-0 h-[300px] w-[300px] rounded-full bg-indigo-500/[0.06] blur-3xl" />
-    <div className="absolute bottom-0 right-1/4 h-[300px] w-[300px] rounded-full bg-cyan-400/[0.06] blur-3xl" />
+    <div className="absolute left-1/2 top-1/2 h-[600px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7d287e]/[0.08] blur-3xl" />
+    <div className="absolute left-1/4 top-0 h-[300px] w-[300px] rounded-full bg-[#7d287e]/[0.06] blur-3xl" />
+    <div className="absolute bottom-0 right-1/4 h-[300px] w-[300px] rounded-full bg-[#7d287e]/[0.06] blur-3xl" />
   </div>
 
   {/* Subtle grid */}
@@ -1041,7 +1049,7 @@ export default async function CareersPage() {
         className="text-4xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:text-6xl"
       >
         Ready to build something{" "}
-        <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-[#7d287e] via-[#9d3fa0] to-[#c56ac6] bg-clip-text text-transparent">
           meaningful?
         </span>
       </Typography>
@@ -1061,7 +1069,7 @@ export default async function CareersPage() {
         <Button
           asChild
           size="lg"
-          className="group min-w-[210px] shadow-xl shadow-primary/15"
+          className="group min-w-[210px] bg-[#7d287e] shadow-xl shadow-[#7d287e]/15 hover:bg-[#6b226b]"
         >
           <Link scroll={true} href="#open-positions">
             Explore Open Positions
@@ -1078,6 +1086,7 @@ export default async function CareersPage() {
     </div>
   </Container>
 </section>
+
 
     </main>
   );
