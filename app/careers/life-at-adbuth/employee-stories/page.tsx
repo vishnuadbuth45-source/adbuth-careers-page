@@ -269,7 +269,7 @@ export default function EmployeeStoriesPage() {
             room for people who want to learn, contribute, and make an impact.
           </p>
 
-          <Link
+          <Link scroll={true}
             href="/careers#open-positions"
             className="mt-8 inline-flex items-center rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand/90 hover:shadow-lg"
           >

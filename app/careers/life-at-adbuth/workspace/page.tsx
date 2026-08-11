@@ -396,7 +396,7 @@ export default function WorkspacePage() {
             great work. There&aposs a place for you here.
           </p>
 
-          <Link
+          <Link scroll={true}
             href="/careers#open-positions"
             className="mt-9 inline-flex items-center rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand/90 hover:shadow-lg"
           >

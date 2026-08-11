@@ -133,14 +133,14 @@ export default async function CareersPage() {
         {/* Actions */}
         <div className="flex flex-wrap items-center gap-3 pt-1">
           <Button asChild size="lg" className="group shadow-lg shadow-primary/10">
-            <Link href="#open-positions">
+            <Link scroll={true} href="#open-positions">
               Explore Opportunities
               <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </Button>
 
           <Button asChild variant="outline" size="lg" className="bg-background/60">
-            <Link href="#why-join">Discover the culture</Link>
+            <Link scroll={true} href="#why-join">Discover the culture</Link>
           </Button>
         </div>
 
@@ -1063,7 +1063,7 @@ export default async function CareersPage() {
           size="lg"
           className="group min-w-[210px] shadow-xl shadow-primary/15"
         >
-          <Link href="#open-positions">
+          <Link scroll={true} href="#open-positions">
             Explore Open Positions
             <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
           </Link>

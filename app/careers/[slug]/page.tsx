@@ -94,7 +94,7 @@ export default async function JobDetailsPage({ params }: { params: Promise<{ slu
               </div>
             </div>
             <Button asChild size="lg">
-              <Link href="#apply">Apply Now</Link>
+              <Link scroll={true} href="#apply">Apply Now</Link>
             </Button>
           </div>
 
@@ -192,7 +192,7 @@ export default async function JobDetailsPage({ params }: { params: Promise<{ slu
             </div>
             <div id="apply" className="mt-8 space-y-4">
               <Button asChild size="lg" className="w-full">
-                <Link href="/careers#open-positions">Explore More Opportunities</Link>
+                <Link scroll={true} href="/careers#open-positions">Explore More Opportunities</Link>
               </Button>
             </div>
           </aside>

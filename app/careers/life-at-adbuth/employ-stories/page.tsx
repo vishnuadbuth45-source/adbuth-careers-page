@@ -126,7 +126,7 @@ export default function EmployeeStoriesPage() {
             something meaningful.
           </p>
 
-         <Link
+         <Link scroll={true} 
   href="/careers#open-positions"
   className="mt-8 inline-flex items-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand/90"
 >
