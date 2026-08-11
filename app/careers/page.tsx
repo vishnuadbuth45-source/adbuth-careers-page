@@ -361,7 +361,7 @@ export default async function CareersPage() {
           More than a workplace.
           <br className="hidden sm:block" />{" "}
           <span className="text-muted-foreground">
-            It&apos;s where we create magic together.
+            It&apos;;s where we create magic together.
           </span>
         </Typography>
 
@@ -728,7 +728,7 @@ export default async function CareersPage() {
     </h3>
 
     <p className="mt-2 text-sm leading-6 text-muted-foreground">
-      We don&apost have any open roles at the moment, but we&aposre always
+      We don&apos;t have any open roles at the moment, but we&apos;re always
       interested in meeting talented people.
     </p>
   </div>

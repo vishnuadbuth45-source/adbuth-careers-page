@@ -109,8 +109,8 @@ export default function EmployeeStoriesPage() {
 
             <div>
               <p className="text-lg leading-8 text-muted-foreground">
-                At AdbuthVerse, we believe growth isn&apost only about job titles.
-                It&aposs about the work you take ownership of, the people you learn
+                At AdbuthVerse, we believe growth isn&apos;t only about job titles.
+                It&apos;s about the work you take ownership of, the people you learn
                 from, and the impact you create along the way.
               </p>
 
@@ -150,7 +150,7 @@ export default function EmployeeStoriesPage() {
                         {employee.image.includes("PASTE_") ? (
                           <div className="absolute inset-0 flex items-center justify-center bg-muted">
                             <p className="px-8 text-center text-sm text-muted-foreground">
-                              Add Lokesh&apos;s Cloudinary image here
+                              Add Lokesh&apos;;s Cloudinary image here
                             </p>
                           </div>
                         ) : (

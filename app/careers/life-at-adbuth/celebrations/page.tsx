@@ -138,7 +138,7 @@ export default function CelebrationsPage() {
 
             <div>
               <p className="text-lg leading-8 text-muted-foreground">
-                Work is a big part of what brings us together, but it isn&apost the
+                Work is a big part of what brings us together, but it isn&apos;t the
                 whole story. We believe that celebrating the people around us
                 creates a stronger team and a better place to work.
               </p>
@@ -179,7 +179,7 @@ export default function CelebrationsPage() {
             </div>
 
             <p className="max-w-md text-sm leading-6 text-muted-foreground lg:text-right">
-              A birthday isn&apost just about another year. It&aposs an opportunity
+              A birthday isn&apos;t just about another year. It&apos;s an opportunity
               for the team to come together, share a few laughs, and make the
               day memorable.
             </p>
@@ -247,7 +247,7 @@ export default function CelebrationsPage() {
             </p>
 
             <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl">
-              Because it&aposs the people
+              Because it&apos;s the people
               <span className="text-muted-foreground"> that make it.</span>
             </h2>
           </div>
@@ -364,11 +364,11 @@ export default function CelebrationsPage() {
               <br />
               TOGETHER.
               <br />
-              <span className="text-[#7d287e]">CELEBRATE TOGETHER.</span>
+              <span className="text-brand">CELEBRATE TOGETHER.</span>
             </h2>
 
             <p className="mt-10 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">
-              The best teams aren&apost only connected by the work they do. They
+              The best teams aren&apos;t only connected by the work they do. They
               are connected by the moments they share along the way.
             </p>
           </div>
@@ -380,7 +380,7 @@ export default function CelebrationsPage() {
       ========================================================= */}
       <section className="py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
             Your next chapter
           </p>
 
@@ -389,18 +389,17 @@ export default function CelebrationsPage() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-            Join a team where the work matters, the people matter, and there&aposs
+            Join a team where the work matters, the people matter, and there&apos;s
             always a reason to celebrate.
           </p>
 
-          <Link
-  scroll={true}
-  href="/careers#open-positions"
-  className="mt-9 inline-flex items-center rounded-full bg-[#7d287e] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#6a216b] hover:shadow-lg"
->
-  Explore Open Positions
-  <span className="ml-2">↗</span>
-</Link>
+          <Link scroll={true}
+            href="/careers#open-positions"
+            className="mt-9 inline-flex items-center rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand/90 hover:shadow-lg"
+          >
+            Explore Open Positions
+            <span className="ml-2">↗</span>
+          </Link>
         </div>
       </section>
     </main>

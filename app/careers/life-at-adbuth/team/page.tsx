@@ -61,7 +61,7 @@ export default function TeamPage() {
               </p>
 
               <p className="mt-5 text-2xl font-medium leading-tight tracking-tight sm:text-3xl">
-                Great work doesn&apost happen behind a screen alone.
+                Great work doesn&apos;t happen behind a screen alone.
               </p>
 
               <p className="mt-5 max-w-md text-sm leading-6 text-muted-foreground">
@@ -191,7 +191,7 @@ export default function TeamPage() {
 </p>
 
               <h2 className="mt-4 text-4xl font-bold leading-tight tracking-[-0.03em] sm:text-5xl">
-                We don&apost just edit videos.
+                We don&apos;t just edit videos.
                 <br />
                 <span className="text-muted-foreground">
                   We shape stories.
@@ -272,7 +272,7 @@ export default function TeamPage() {
                     </h3>
 
                     <p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">
-                      Our goal isn&apost simply to make content look good. We
+                      Our goal isn&apos;t simply to make content look good. We
                       create visuals that communicate, connect, and leave an
                       impression.
                     </p>
@@ -305,8 +305,8 @@ export default function TeamPage() {
             </h2>
 
             <p className="mt-10 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">
-              We&aposre building a team where editors aren&apost just operators behind
-              a timeline. They&aposre storytellers, problem solvers, and creators
+              We&apos;re building a team where editors aren&apos;t just operators behind
+              a timeline. They&apos;re storytellers, problem solvers, and creators
               who have a voice in the work.
             </p>
           </div>
@@ -327,8 +327,8 @@ export default function TeamPage() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-            If you&aposre an editor, creator, storyteller, or someone who simply
-            loves making great things, we&aposd love to hear from you.
+            If you&apos;re an editor, creator, storyteller, or someone who simply
+            loves making great things, we&apos;d love to hear from you.
           </p>
 
           <Link
