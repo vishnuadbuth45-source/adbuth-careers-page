@@ -196,7 +196,7 @@ export default async function JobDetailsPage({ params }: { params: Promise<{ slu
                 </div>
               </div>
             </div>
-            <div id="apply" className="mt-8 space-y-4">
+            <div  className="mt-8 space-y-4">
               <Button asChild size="lg" className="w-full bg-[#7d287e] hover:bg-[#6a216b]">
                 <Link scroll={true} href="/careers#open-positions">Explore More Opportunities</Link>
               </Button>
@@ -204,7 +204,7 @@ export default async function JobDetailsPage({ params }: { params: Promise<{ slu
           </aside>
         </div>
 
-        <div className="rounded-2xl border border-border bg-surface/70 p-8">
+        <div id="apply" className="rounded-2xl border border-border bg-surface/70 p-8">
           <Typography variant="h3" as="h2" className="mb-4">
             Apply for this role
           </Typography>

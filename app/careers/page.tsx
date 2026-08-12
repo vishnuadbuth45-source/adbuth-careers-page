@@ -5,6 +5,7 @@ import { Typography } from "@/components/shared/typography";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { HashScroll } from "@/components/shared/hash-scroll";
 import { createClient } from "@/lib/supabase/server";
 import image1 from "@/assets/1.webp";
 import image2 from "@/assets/2.webp";
@@ -89,6 +90,7 @@ export default async function CareersPage() {
 
   return (
     <main className="overflow-hidden bg-background text-foreground">
+      <HashScroll />
 <section className="relative isolate overflow-hidden border-b border-border/60">
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
