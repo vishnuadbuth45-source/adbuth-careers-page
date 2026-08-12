@@ -172,74 +172,82 @@ export default async function CareersPage() {
 
     {/* Right — Visual panel */}
     <div className="relative">
-      {/* Glow behind card */}
-      <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#7d287e]/15 via-[#7d287e]/5 to-[#c56ac6]/10 blur-2xl" />
+  {/* Glow behind card */}
+  <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#7d287e]/20 via-[#7d287e]/10 to-[#c56ac6]/15 blur-2xl" />
 
-      <div className="relative overflow-hidden rounded-[2rem] border border-border/60 bg-background/70 p-2 shadow-2xl shadow-black/10 backdrop-blur-xl">
-        {/* Inner card */}
-        <div className="relative min-h-[390px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-[#1f1f23] via-[#2b2b31] to-[#383840] p-7 text-white sm:p-9">
-          {/* Decorative gradients */}
-          <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/6 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-slate-400/8 blur-3xl" />
+  <div className="relative overflow-hidden rounded-[2rem] border border-[#7d287e]/15 bg-background/70 p-2 shadow-2xl shadow-[#7d287e]/10 backdrop-blur-xl">
+    {/* Inner card */}
+    <div className="relative min-h-[390px] overflow-hidden rounded-[1.5rem] border border-[#7d287e]/10 bg-gradient-to-br from-[#f8eff8] via-[#f3e4f3] to-[#ead5eb] p-7 text-[#7d287e] sm:p-9">
 
-          {/* Subtle grid */}
-          <div className="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.5)_1px,transparent_1px)] [background-size:32px_32px]" />
+      {/* Decorative gradients */}
+      <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#7d287e]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-[#c56ac6]/10 blur-3xl" />
 
-          <div className="relative flex min-h-[340px] flex-col justify-between">
-            {/* Top */}
-            <div className="space-y-7">
-              <div className="flex items-center justify-between">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.07] px-3 py-1.5 text-xs font-medium text-slate-200 backdrop-blur">
-                  <Brain className="h-3.5 w-3.5 text-slate-300" />
-                  World-class craft
-                </div>
+      {/* Subtle grid */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.05] [background-image:linear-gradient(rgba(125,40,126,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(125,40,126,0.5)_1px,transparent_1px)] [background-size:32px_32px]" />
 
-                <div className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                  <span className="text-xs text-slate-300">Building</span>
-                </div>
-              </div>
+      <div className="relative flex min-h-[340px] flex-col justify-between">
 
-              <div className="max-w-md space-y-4">
-                <Typography
-                  variant="h3"
-                  as="h2"
-                  className="text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl"
-                >
-                  Work with builders who care about{" "}
-                  <span className="text-slate-200">what they create.</span>
-                </Typography>
+        {/* Top */}
+        <div className="space-y-7">
+          <div className="flex items-center justify-between">
 
-                <p className="max-w-sm text-sm leading-6 text-slate-300">
-                  Bring your ideas, challenge assumptions, and help turn
-                  ambitious thinking into products people genuinely value.
-                </p>
-              </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#7d287e]/15 bg-[#7d287e]/[0.07] px-3 py-1.5 text-xs font-medium text-[#7d287e] backdrop-blur">
+              <Brain className="h-3.5 w-3.5 text-[#7d287e]" />
+              World-class craft
             </div>
 
-            {/* Bottom */}
-            <div className="space-y-5">
-              <div className="h-px bg-gradient-to-r from-white/10 via-white/10 to-transparent" />
-
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Collaborative environment",
-                  "High ownership",
-                  "Continuous learning",
-                ].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-slate-200 backdrop-blur"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+            <div className="flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <span className="text-xs text-[#7d287e]/70">
+                Building
+              </span>
             </div>
           </div>
+
+          <div className="max-w-md space-y-4">
+            <Typography
+              variant="h3"
+              as="h2"
+              className="text-2xl font-semibold leading-tight tracking-tight text-[#7d287e] sm:text-3xl"
+            >
+              Work with builders who care about{" "}
+              <span className="text-[#7d287e]/70">
+                what they create.
+              </span>
+            </Typography>
+
+            <p className="max-w-sm text-sm leading-6 text-[#7d287e]/70">
+              Bring your ideas, challenge assumptions, and help turn
+              ambitious thinking into products people genuinely value.
+            </p>
+          </div>
         </div>
+
+        {/* Bottom */}
+        <div className="space-y-5">
+          <div className="h-px bg-gradient-to-r from-[#7d287e]/15 via-[#7d287e]/10 to-transparent" />
+
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Collaborative environment",
+              "High ownership",
+              "Continuous learning",
+            ].map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-[#7d287e]/15 bg-[#7d287e]/[0.06] px-3 py-1.5 text-xs font-medium text-[#7d287e] backdrop-blur"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
+  </div>
+</div>
   </Container>
 </section>
 <section
