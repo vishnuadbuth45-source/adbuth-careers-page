@@ -376,7 +376,7 @@ export default async function CareersPage() {
       </div>
 
       <div className="hidden items-center gap-3 text-sm text-muted-foreground lg:flex">
-        <span className="h-2 w-2 rounded-full bg-brand" />
+        <span className="h-2 w-2 rounded-full bg-[#7d287e]" />
         Inside AdbuthVerse
       </div>
     </div>
@@ -428,7 +428,7 @@ export default async function CareersPage() {
         <Link
           key={item.title}
           href={item.href}
-          className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-background/60 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-brand/30 hover:shadow-2xl hover:shadow-brand/10 ${
+          className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-background/60 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#7d287e]/30 hover:shadow-2xl hover:shadow-[#7d287e]/10 ${
             index === 0 ? "lg:col-span-2" : ""
           }`}
         >
@@ -456,7 +456,7 @@ export default async function CareersPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90" />
 
             {/* Hover tint */}
-            <div className="absolute inset-0 bg-brand/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-[#7d287e]/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
             {/* Number */}
             <span className="absolute right-5 top-5 text-xs font-medium tabular-nums text-white/60">
@@ -549,14 +549,14 @@ export default async function CareersPage() {
         return (
           <Card
             key={item.title}
-            className="group relative overflow-hidden border-border/60 bg-background/60 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:bg-background/80 hover:shadow-xl hover:shadow-brand/5"
+            className="group relative overflow-hidden border-border/60 bg-background/60 transition-all duration-300 hover:-translate-y-1 hover:border-[#7d287e]/15 hover:bg-background/80 hover:shadow-xl hover:shadow-[#7d287e]/5"
           >
             {/* Soft hover glow */}
-            <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-brand/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-[#7d287e]/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
             <CardHeader className="relative">
               <div className="flex items-start justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand/15 bg-brand/10 text-brand transition-all duration-300 group-hover:scale-105 group-hover:border-brand/25 group-hover:bg-brand/15">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#7d287e]/15 bg-[#7d287e]/10 text-[#7d287e] transition-all duration-300 group-hover:scale-105 group-hover:border-[#7d287e]/25 group-hover:bg-[#7d287e]/15">
                 <Icon className="h-5 w-5 text-[#7d287e]" />
                 </div>
 
@@ -625,7 +625,7 @@ export default async function CareersPage() {
 
       {jobs.length > 0 && (
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <span className="flex h-7 min-w-7 items-center justify-center rounded-full bg-brand/10 px-2 font-semibold text-brand">
+          <span className="flex h-7 min-w-7 items-center justify-center rounded-full bg-[#7d287e]/10 px-2 font-semibold text-[#7d287e]">
             {jobs.length}
           </span>
           <span>{jobs.length === 1 ? "open role" : "open roles"}</span>
@@ -889,7 +889,7 @@ export default async function CareersPage() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <span className="transition-colors duration-200 group-hover:text-brand">
+                  <span className="transition-colors duration-200 group-hover:text-[#7d287e]">
                     {faq.question}
                   </span>
                 </span>

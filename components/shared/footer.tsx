@@ -123,15 +123,15 @@ function Footer() {
 
                   return (
                     <a
-                      key={social.label}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.label}
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground hover:bg-muted hover:text-foreground"
-                    >
-                      <Icon className="h-4 w-4" />
-                    </a>
+  key={social.label}
+  href={social.href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={social.label}
+  className="flex h-9 w-9 items-center justify-center rounded-full border border-[#7d287e] text-[#7d287e] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#7d287e] hover:bg-[#7d287e] hover:text-white"
+>
+  <Icon className="h-4 w-4" />
+</a>
                   );
                 })}
               </div>

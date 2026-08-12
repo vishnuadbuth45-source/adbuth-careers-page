@@ -84,7 +84,7 @@ export default function CelebrationsPage() {
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div>
               <div className="mb-7 flex items-center gap-3">
-                <span className="h-px w-10 bg-brand" />
+                <span className="h-px w-10 bg-[#7d287e]" />
 
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                   Life at AdbuthVerse
@@ -162,7 +162,7 @@ export default function CelebrationsPage() {
           <div className="mb-10 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <div className="flex items-center gap-3">
-                <span className="rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-[#7d287e]">
+                <span className="rounded-full border border-[#7d287e]/30 bg-[#7d287e]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-[#7d287e]">
                   Birthday
                 </span>
 
@@ -281,7 +281,7 @@ export default function CelebrationsPage() {
           <div className="mb-10 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <div className="flex items-center gap-3">
-                <span className="rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-[#7d287e]">
+                <span className="rounded-full border border-[#7d287e]/30 bg-[#7d287e]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-[#7d287e]">
                   Birthday
                 </span>
 
@@ -364,7 +364,7 @@ export default function CelebrationsPage() {
               <br />
               TOGETHER.
               <br />
-              <span className="text-brand">CELEBRATE TOGETHER.</span>
+              <span className="text-[#7d287e]">CELEBRATE TOGETHER.</span>
             </h2>
 
             <p className="mt-10 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">
@@ -380,7 +380,7 @@ export default function CelebrationsPage() {
       ========================================================= */}
       <section className="py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
             Your next chapter
           </p>
 
@@ -395,7 +395,7 @@ export default function CelebrationsPage() {
 
           <Link scroll={true}
             href="/careers#open-positions"
-            className="mt-9 inline-flex items-center rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand/90 hover:shadow-lg"
+            className="mt-9 inline-flex items-center rounded-full bg-[#7d287e] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#7d287e]/90 hover:shadow-lg"
           >
             Explore Open Positions
             <span className="ml-2">↗</span>

@@ -130,8 +130,8 @@ export function ReelCarousel() {
               text-foreground
               shadow-sm
               transition-all duration-300
-              hover:border-brand
-              hover:bg-brand
+              hover:border-[#7d287e]
+              hover:bg-[#7d287e]
               hover:text-white
               sm:relative
               sm:left-auto
@@ -295,8 +295,8 @@ export function ReelCarousel() {
               text-foreground
               shadow-sm
               transition-all duration-300
-              hover:border-brand
-              hover:bg-brand
+              hover:border-[#7d287e]
+              hover:bg-[#7d287e]
               hover:text-white
               sm:relative
               sm:right-auto

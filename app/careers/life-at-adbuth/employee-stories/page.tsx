@@ -73,7 +73,7 @@ export default function EmployeeStoriesPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-4xl">
             <div className="mb-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
-              <span className="h-px w-8 bg-brand" />
+              <span className="h-px w-8 bg-[#7d287e]" />
               Life at AdbuthVerse
             </div>
 
@@ -143,7 +143,7 @@ export default function EmployeeStoriesPage() {
                 >
                   {/* Image */}
                   <div className="relative">
-                    <div className="absolute -inset-3 rounded-[2rem] bg-brand/[0.04] blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute -inset-3 rounded-[2rem] bg-[#7d287e]/[0.04] blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
 
                     <div className="relative overflow-hidden rounded-[2rem] border border-border bg-surface">
                       <div className="relative aspect-[4/5]">
@@ -201,7 +201,7 @@ export default function EmployeeStoriesPage() {
                     </p>
 
                     {/* Quote */}
-                    <blockquote className="relative mt-8 border-l-2 border-brand pl-6">
+                    <blockquote className="relative mt-8 border-l-2 border-[#7d287e] pl-6">
                       <p className="text-lg font-medium leading-8 tracking-tight">
                         “{employee.quote}”
                       </p>

@@ -80,7 +80,7 @@ export default function WorkspacePage() {
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div>
               <div className="mb-7 flex items-center gap-3">
-                <span className="h-px w-10 bg-brand" />
+                <span className="h-px w-10 bg-[#7d287e]" />
 
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7d287e]">
                   Life at AdbuthVerse
