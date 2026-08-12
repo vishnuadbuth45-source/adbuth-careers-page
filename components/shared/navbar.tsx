@@ -7,8 +7,8 @@ import type { NavLink } from "@/types";
 
 const careersLinks: NavLink[] = [
   { label: "Open Roles", href: "/careers#open-positions" },
-  { label: "About Us", href: "/careers#why-join" },
-  { label: "Culture", href: "/careers#life-at" },
+  { label: "About Us", href: "https://www.adbuthverse.com/about" },
+  { label: "Culture", href: "/careers#why-join" },
 ];
 
 function Navbar() {

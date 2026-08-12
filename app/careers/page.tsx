@@ -32,22 +32,22 @@ type PublishedJob = {
 export const dynamic = "force-dynamic";
 
 const whyJoinItems = [
-  { title: "Mission", description: "Build products that shape meaningful digital experiences.", icon: Compass },
-  { title: "Vision", description: "Create a future where technology feels human, elegant, and intuitive.", icon: Rocket },
-  { title: "Innovation", description: "Experiment boldly with modern tools and forward-thinking ideas.", icon: Lightbulb },
-  { title: "Learning", description: "Grow through mentorship, curiosity, and continuous upskilling.", icon: GraduationCap },
-  { title: "Ownership", description: "Take initiative, lead and make an impact from day one.", icon: Crown },
-  { title: "Career Growth", description: "Shape your path in a company that rewards ambition and craft.", icon: BriefcaseBusiness },
+  { title: "Mission", description: "We aim to transform every creative vision into a masterpiece with precision, passion, and unparalleled video editing expertise and to be inspiring-encouraging individuals who pursue their passion and reach for the stars.", icon: Compass },
+  { title: "Vision", description: "To be a symbol of limitless creativity and unwavering quality as our company strives to be recognized for delivering exceptional post production work to a global audience, inspiring creators and businesses worldwide with visuals that captivate, resonate, and endure through our video editing services.", icon: Rocket },
+  // { title: "Innovation", description: "Experiment boldly with modern tools and forward-thinking ideas.", icon: Lightbulb },
+  // { title: "Learning", description: "Grow through mentorship, curiosity, and continuous upskilling.", icon: GraduationCap },
+  // { title: "Ownership", description: "Take initiative, lead and make an impact from day one.", icon: Crown },
+  // { title: "Career Growth", description: "Shape your path in a company that rewards ambition and craft.", icon: BriefcaseBusiness },
 ];
 
-const lifeAtItems = [
-  { title: "Team Photos", description: "A close-knit, global crew that ships with heart.", icon: Users ,href:"/careers/life-at-adbuth/team"},
-  { title: "Workspace", description: "A modern environment designed for focus and collaboration.", icon: Laptop ,href:"/careers/life-at-adbuth/workspace"},
-  { title: "Events", description: "Thoughtful gatherings that strengthen the team experience.", icon: CalendarDays ,href:"/careers/life-at-adbuth/events"},
-  { title: "Celebrations", description: "Moments that honor wins, milestones, and people.", icon: Trophy ,href:"/careers/life-at-adbuth/celebrations"},
-  { title: "Hackathons", description: "Creative sprints where ideas become real products.", icon: Sparkles ,href:"/careers/life-at-adbuth/hackathons"},
-  { title: "Employee Stories", description: "Voices from the people building AdbuthVerse every day.", icon: HeartHandshake ,href:"/careers/life-at-adbuth/employ-stories"},
-];
+// const lifeAtItems = [
+//   { title: "Team Photos", description: "A close-knit, global crew that ships with heart.", icon: Users ,href:"/careers/life-at-adbuth/team"},
+//   { title: "Workspace", description: "A modern environment designed for focus and collaboration.", icon: Laptop ,href:"/careers/life-at-adbuth/workspace"},
+//   { title: "Events", description: "Thoughtful gatherings that strengthen the team experience.", icon: CalendarDays ,href:"/careers/life-at-adbuth/events"},
+//   { title: "Celebrations", description: "Moments that honor wins, milestones, and people.", icon: Trophy ,href:"/careers/life-at-adbuth/celebrations"},
+//   { title: "Hackathons", description: "Creative sprints where ideas become real products.", icon: Sparkles ,href:"/careers/life-at-adbuth/hackathons"},
+//   { title: "Employee Stories", description: "Voices from the people building AdbuthVerse every day.", icon: HeartHandshake ,href:"/careers/life-at-adbuth/employ-stories"},
+// ];
 
 const benefits = [
   { title: "Flexible Work", description: "Choose the rhythm that helps you do your best work.", icon: Workflow },
@@ -64,7 +64,7 @@ const faqs = [
   {question: "Remote or Onsite?", answer: "We work fully onsite, creating a collaborative environment where teams can connect, learn, and build together." },
   { question: "Internship?", answer: "We welcome interns and early-career builders who are curious, consistent, and hungry to learn." },
   { question: "Interview Duration?", answer: "Most interviews span one to two meetings, depending on the role and level." },
-  { question: "Response Time?", answer: "We aim to respond within a few business days after each stage." },
+  // { question: "Response Time?", answer: "We aim to respond within a few business days after each stage." },
   { question: "Multiple Applications?", answer: "You can apply to more than one role if the opportunities genuinely fit your background." },
   { question: "Required Documents?", answer: "A tailored resume and a short note about your interest are usually enough to begin." },
 ];
@@ -267,7 +267,7 @@ export default async function CareersPage() {
         <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
   <span className="h-px w-6 bg-[#7d287e]" />
   Why AdbuthVerse
-</div>
+  </div>
 
         <Typography
           variant="h2"
@@ -302,10 +302,10 @@ export default async function CareersPage() {
         const Icon = item.icon;
 
         return (
-<Card
+  <Card
   key={item.title}
   className="group relative overflow-hidden border-border/60 bg-background/60 transition-all duration-300 hover:-translate-y-1 hover:!border-[#7d287e]/30 hover:bg-background/80 hover:!shadow-xl hover:!shadow-[#7d287e]/5"
->
+  >
   {/* Hover glow */}
   <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-[#7d287e]/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
@@ -335,263 +335,14 @@ export default async function CareersPage() {
 
   {/* Bottom accent */}
   <div className="absolute bottom-0 left-0 h-px w-0 bg-[#7d287e] transition-all duration-500 group-hover:w-full" />
-</Card>
+  </Card>
         );
       })}
     </div>
   </Container>
-</section>
+  </section>
 
-<section
-  id="life-at"
-  className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
->
-  {/* Ambient background */}
-  <div className="pointer-events-none absolute inset-0">
-    <div className="absolute -left-40 top-20 h-[450px] w-[450px] rounded-full bg-[#7d287e]/[0.06] blur-3xl" />
-    <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
-  </div>
-
-  <Container className="relative space-y-14 px-6 lg:px-8">
-    {/* Section heading */}
-    <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-      <div className="max-w-2xl space-y-4">
-       <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
-  <span className="h-px w-6 bg-[#7d287e]" />
-  Life at AdbuthVerse
-</div>
-
-        <Typography
-          variant="h2"
-          as="h2"
-          className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
-        >
-          More than a workplace.
-          <br className="hidden sm:block" />{" "}
-          <span className="text-muted-foreground">
-            It&apos;;s where we create magic together.
-          </span>
-        </Typography>
-
-        <Typography
-          variant="muted"
-          as="p"
-          className="max-w-xl text-base leading-7 sm:text-lg"
-        >
-          A glimpse into the people, spaces, stories, and moments that make
-          life at AdbuthVerse unique.
-        </Typography>
-      </div>
-
-      <div className="hidden items-center gap-3 text-sm text-muted-foreground lg:flex">
-        <span className="h-2 w-2 rounded-full bg-[#7d287e]" />
-        Inside AdbuthVerse
-      </div>
-    </div>
-
-    {/* Life at cards */}
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {[
-        {
-          title: "Our Team",
-          description:
-            "A closer look at the creative minds, editors, and people building AdbuthVerse.",
-          href: "/careers/life-at-adbuth/team",
-          image:
-            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426149/TEAM.jpg",
-        },
-        {
-          title: "Our Workspace",
-          description:
-            "The environment where ideas take shape, teams collaborate, and creative work comes to life.",
-          href: "/careers/life-at-adbuth/workspace",
-          image:
-            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426151/WORKSPACE.jpg",
-        },
-        {
-          title: "Celebrations",
-          description:
-            "The birthdays, milestones, achievements, and moments we celebrate together.",
-          href: "/careers/life-at-adbuth/celebrations",
-          image:
-            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426145/CELEBRATIONS.jpg",
-        },
-        {
-          title: "Employee Stories",
-          description:
-            "Meet the people behind the work and discover the stories that shape our team.",
-          href: "/careers/life-at-adbuth/employee-stories",
-          image:
-            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426146/EMPLOYEE_STORIES.jpg",
-        },
-        {
-          title: "Events",
-          description:
-            "From creative conversations to industry gatherings, see what happens beyond the everyday.",
-          href: "/careers/life-at-adbuth/events",
-          image:
-            "https://res.cloudinary.com/xmg6q7k7/image/upload/v1786426147/EVENT.jpg",
-        },
-      ].map((item, index) => (
-        <Link
-          key={item.title}
-          href={item.href}
-          className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-background/60 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#7d287e]/30 hover:shadow-2xl hover:shadow-[#7d287e]/10 ${
-            index === 0 ? "lg:col-span-2" : ""
-          }`}
-        >
-          {/* Image */}
-          <div
-            className={`relative overflow-hidden ${
-              index === 0
-                ? "aspect-[16/8]"
-                : "aspect-[16/10]"
-            }`}
-          >
-            <Image
-              src={item.image}
-              alt={item.title}
-              fill
-              sizes={
-                index === 0
-                  ? "(max-width: 1024px) 100vw, 66vw"
-                  : "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              }
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            />
-
-            {/* Dark gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90" />
-
-            {/* Hover tint */}
-            <div className="absolute inset-0 bg-[#7d287e]/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-            {/* Number */}
-            <span className="absolute right-5 top-5 text-xs font-medium tabular-nums text-white/60">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-
-            {/* Title */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
-              <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-                {item.title}
-              </h3>
-            </div>
-          </div>
-
-          {/* Description */}
-          <div className="relative p-5 sm:p-6">
-            <p className="text-sm leading-6 text-muted-foreground">
-              {item.description}
-            </p>
-
-            {/* Explore */}
-            <div className="mt-5 flex items-center gap-2 text-sm font-medium text-[#7d287e]">
-  Explore
-  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-</div>
-
-            {/* Bottom accent */}
-            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-[#7d287e] transition-all duration-500 group-hover:w-full" />
-          </div>
-        </Link>
-      ))}
-
-      {/* Fifth card fills the remaining space nicely */}
-    </div>
-  </Container>
-</section>
-
-<section
-  id="benefits"
-  className="relative isolate overflow-hidden border-b border-border/60 py-24 lg:py-28"
->
-  {/* Ambient background */}
-  <div className="pointer-events-none absolute inset-0">
-    <div className="absolute left-0 top-0 h-[400px] w-[500px] rounded-full bg-[#7d287e]/[0.05] blur-3xl" />
-    <div className="absolute bottom-0 right-0 h-[400px] w-[500px] rounded-full bg-[#7d287e]/[0.06] blur-3xl" />
-  </div>
-
-  <Container className="relative space-y-14 px-6 lg:px-8">
-    {/* Section heading */}
-    <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-      <div className="max-w-2xl space-y-4">
-       <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
-  <span className="h-px w-6 bg-[#7d287e]" />
-  Benefits & Perks
-</div>
-
-        <Typography
-          variant="h2"
-          as="h2"
-          className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
-        >
-          Support for the work.
-          <br className="hidden sm:block" />{" "}
-          <span className="text-muted-foreground">
-            And everything around it.
-          </span>
-        </Typography>
-
-        <Typography
-          variant="muted"
-          as="p"
-          className="max-w-xl text-base leading-7 sm:text-lg"
-        >
-          Designed to support people as professionals, teammates, and humans —
-          so you can focus on doing your best work.
-        </Typography>
-      </div>
-
-      <div className="hidden items-center gap-3 text-sm text-muted-foreground lg:flex">
-        <span className="h-2 w-2 rounded-full bg-emerald-500" />
-        People come first
-      </div>
-    </div>
-
-    {/* Benefits grid */}
-    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-      {benefits.map((item, index) => {
-        const Icon = item.icon;
-
-        return (
-          <Card
-            key={item.title}
-            className="group relative overflow-hidden border-border/60 bg-background/60 transition-all duration-300 hover:-translate-y-1 hover:border-[#7d287e]/15 hover:bg-background/80 hover:shadow-xl hover:shadow-[#7d287e]/5"
-          >
-            {/* Soft hover glow */}
-            <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-[#7d287e]/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
-
-            <CardHeader className="relative">
-              <div className="flex items-start justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#7d287e]/15 bg-[#7d287e]/10 text-[#7d287e] transition-all duration-300 group-hover:scale-105 group-hover:border-[#7d287e]/25 group-hover:bg-[#7d287e]/15">
-                <Icon className="h-5 w-5 text-[#7d287e]" />
-                </div>
-
-                <span className="text-xs font-medium tabular-nums text-muted-foreground/40">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-              </div>
-
-              <CardTitle className="pt-4 text-base font-semibold tracking-tight">
-                {item.title}
-              </CardTitle>
-            </CardHeader>
-
-            <CardContent className="relative">
-              <p className="text-sm leading-6 text-muted-foreground">
-                {item.description}
-              </p>
-            </CardContent>
-
-            {/* Bottom hover accent */}
-            <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-brand to-[#7d287e] transition-all duration-500 group-hover:w-full" />
-          </Card>
-        );
-      })}
-    </div>
-  </Container>
-</section>
+{/* paste life at section here  */}
 
 
 
@@ -760,9 +511,9 @@ export default async function CareersPage() {
     {/* Section heading */}
     <div className="max-w-2xl space-y-4">
       <div className="inline-flex items-center gap-2 text-sm font-medium text-[#7d287e]">
-  <span className="h-px w-6 bg-[#7d287e]" />
-  How it works
-</div>
+        <span className="h-px w-6 bg-[#7d287e]" />
+        How it works
+      </div>
 
       <Typography
         variant="h2"
@@ -784,10 +535,7 @@ export default async function CareersPage() {
 
     {/* Process */}
     <div className="relative">
-      {/* Connecting line — desktop */}
-      <div className="absolute left-[2.125rem] top-8 hidden h-[calc(100%-4rem)] w-px bg-gradient-to-b from-brand/40 via-border to-transparent xl:block" />
-
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-10 xl:gap-y-8">
+      <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         {[
           ["1", "Apply", "Share your background and interest in the role."],
           ["2", "Resume Review", "We assess fit, experience, and motivation."],
@@ -796,29 +544,26 @@ export default async function CareersPage() {
           ["5", "Final Discussion", "Alignment on growth, expectations, and impact."],
           ["6", "Offer & Onboarding", "A thoughtful welcome into the team."],
         ].map(([step, title, description]) => (
-       <div
-  key={title}
-  className="group relative flex gap-5 rounded-2xl border border-border/60 bg-background/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#7d287e]/30 hover:bg-background/80 hover:shadow-xl hover:shadow-[#7d287e]/5"
->
-  {/* Step number */}
-  <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#7d287e]/20 bg-[#7d287e]/10 text-sm font-semibold text-[#7d287e] transition-all duration-300 group-hover:border-[#7d287e]/40 group-hover:bg-[#7d287e]/15 group-hover:scale-105">
-    {step}
-  </div>
+          <div
+            key={title}
+            className="group relative flex flex-col rounded-2xl border border-border/60 bg-background/50 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#7d287e]/30 hover:bg-background/80 hover:shadow-xl hover:shadow-[#7d287e]/5"
+          >
+            {/* Step number */}
+            <div className="mb-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#7d287e]/20 bg-[#7d287e]/10 text-sm font-semibold text-[#7d287e] transition-all duration-300 group-hover:scale-105 group-hover:border-[#7d287e]/40 group-hover:bg-[#7d287e]/15">
+              {step}
+            </div>
 
-  {/* Content */}
-  <div className="min-w-0 pt-0.5">
-    <h3 className="font-semibold tracking-tight text-foreground">
-      {title}
-    </h3>
+            {/* Content */}
+            <div className="min-w-0">
+              <h3 className="font-semibold tracking-tight text-foreground">
+                {title}
+              </h3>
 
-    <p className="mt-2 text-sm leading-6 text-muted-foreground">
-      {description}
-    </p>
-  </div>
-
-  {/* Hover accent */}
-  <div className="absolute bottom-0 left-5 right-5 h-px scale-x-0 bg-gradient-to-r from-[#7d287e] to-[#7d287e] transition-transform duration-500 group-hover:scale-x-100" />
-</div>
+              <p className="mt-2 text-xs leading-5 text-muted-foreground">
+                {description}
+              </p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
@@ -827,6 +572,7 @@ export default async function CareersPage() {
     <div className="flex flex-col gap-3 rounded-2xl border border-border/60 bg-muted/20 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
       <div>
         <p className="font-medium">We value your time.</p>
+
         <p className="mt-1 text-sm text-muted-foreground">
           Every conversation has a purpose, and we’ll keep you informed
           throughout the process.
