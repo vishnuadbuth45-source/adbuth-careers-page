@@ -712,7 +712,7 @@ export default async function CareersPage() {
     size="lg"
     className="group bg-[#7d287e] text-white shadow-lg shadow-[#7d287e]/20 hover:bg-[#6b216b]"
   >
-    <a href="mailto:careers@adbuthverse.com">
+    <a href="mailto:contact@adbuthverse.com">
       Send a Message
       <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
     </a>
